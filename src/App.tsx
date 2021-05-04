@@ -6,7 +6,8 @@ import Header from './header/Header';
 import Main from './main/Main';
 
 function App() {
-    const pages = [ "account" ];
+    const pages = [ "home", "account" ];
+    const defaultPage = pages[0];
     const [ currentPage, setCurrentPage ] = useState(pages[0]);
 
 
@@ -18,6 +19,7 @@ function App() {
                         pages={pages}
                         currentPage={currentPage}
                         setCurrentPage={setCurrentPage}
+                        defaultPage={defaultPage}
                     />
                 </Grid>
 
@@ -25,6 +27,7 @@ function App() {
                     <Main
                         pages={pages}
                         currentPage={currentPage}
+                        defaultPage={defaultPage}
                     />
                 </Grid>
             </Grid>

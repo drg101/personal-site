@@ -3,3 +3,18 @@
   min-height: 100vh;
 }
 
+.Header {
+  padding: 20px;
+  background-color: #91c788;
+}
+
+.logo {
+  width: 100%;
+  cursor: pointer;
+}
+
+.headerItem {
+  font-family: 'Fredoka One', cursive;
+  font-size: 36px;
+  cursor: pointer;
+}
