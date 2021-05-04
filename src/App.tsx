@@ -4,34 +4,51 @@ import './App.css';
 import { Grid } from '@material-ui/core';
 import Header from './header/Header';
 import Main from './main/Main';
+import UrlParams from './lib/UrlParams';
+import Store from './globalState/Store';
+
+
+const pages = [ "home", "account", "tokens" ];
+const hiddenPages = [ "token" ]
+const urlOptions = UrlParams();
+let defaultPageFromParams: string;
+if (urlOptions.address) {
+    defaultPageFromParams = "account"
+}
+else if (urlOptions.contract) {
+    defaultPageFromParams = "token"
+}
 
 function App() {
-    const pages = [ "home", "account" ];
-    const defaultPage = pages[0];
-    const [ currentPage, setCurrentPage ] = useState(pages[0]);
-
+    const defaultPage = pages[ 0 ];
+    const [ currentPage, setCurrentPage ] = useState(defaultPageFromParams ?? pages[ 0 ]);
 
     return (
-        <div className="App">
-            <Grid container>
-                <Grid item xs={12}>
-                    <Header
-                        pages={pages}
-                        currentPage={currentPage}
-                        setCurrentPage={setCurrentPage}
-                        defaultPage={defaultPage}
-                    />
-                </Grid>
+        <Store>
+            <div className="App">
+                <Grid container>
+                    <Grid item xs={12}>
+                        <Header
+                            pages={pages}
+                            hiddenPages={hiddenPages}
+                            currentPage={currentPage}
+                            setCurrentPage={setCurrentPage}
+                            defaultPage={defaultPage}
+                        />
+                    </Grid>
 
-                <Grid item xs={12}>
-                    <Main
-                        pages={pages}
-                        currentPage={currentPage}
-                        defaultPage={defaultPage}
-                    />
+                    <Grid item xs={12}>
+                        <Main
+                            pages={pages}
+                            hiddenPages={hiddenPages}
+                            currentPage={currentPage}
+                            defaultPage={defaultPage}
+                            setCurrentPage={setCurrentPage}
+                        />
+                    </Grid>
                 </Grid>
-            </Grid>
-        </div>
+            </div>
+        </Store>
     );
 }
 
