@@ -1,4 +1,5 @@
 export default interface PageInfo {
     pages: string[],
-    currentPage: string
+    currentPage: string,
+    setCurrentPage?: (newName: string) => void
 }
