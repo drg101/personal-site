@@ -1,3 +1,6 @@
+BUILD_DIR=./build/.
+DEPLOY_DIR=/x/bsclib/site/
+
 npm run build
-cp -r ./build /x/bsclib/
-mv /x/bsclib/build /x/bsclib/site
+echo "Copying ${BUILD_DIR} to ${DEPLOY_DIR}"
+cp -a $BUILD_DIR $DEPLOY_DIR

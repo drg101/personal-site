@@ -11,10 +11,11 @@
 .logo {
   width: 100%;
   cursor: pointer;
+  min-height: 50px;
 }
 
 .headerItem {
   font-family: 'Fredoka One', cursive;
-  font-size: 36px;
   cursor: pointer;
+  vertical-align: bottom;
 }
