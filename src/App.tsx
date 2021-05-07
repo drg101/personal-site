@@ -22,7 +22,7 @@ else if (urlOptions.contract) {
 function App() {
     const defaultPage = pages[ 0 ];
     return (
-        <GlobalStateProvider>
+        <GlobalStateProvider value={{page: "home", contract: "", address: ""}}>
             <div className="App">
                 <Grid container>
                     <Grid item xs={12}>

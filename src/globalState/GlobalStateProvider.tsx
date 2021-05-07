@@ -2,8 +2,8 @@ import React, { createContext, useState, useContext, Dispatch, SetStateAction } 
 import GlobalStateInterface from '../interfaces/GlobalState'
 
 const GlobalStateContext = createContext({
-  state: {} as GlobalStateInterface,
-  setPartialState: {} as (update: Partial<GlobalStateInterface>) => void
+  globalState: {} as GlobalStateInterface,
+  setGlobalState: {} as (update: Partial<GlobalStateInterface>) => void
 });
 
 const GlobalStateProvider = ({
@@ -13,15 +13,15 @@ const GlobalStateProvider = ({
   children: React.ReactNode;
   value?: GlobalStateInterface;
 }) => {
-  const [ state, setState ] = useState(value);
-  const setPartialState = (update: Partial<GlobalStateInterface>) => {
+  const [ globalState, setState ] = useState(value);
+  const setGlobalState = (update: Partial<GlobalStateInterface>) => {
     setState({
-      ...state,
+      ...globalState,
       ...update
     });
   }
   return (
-    <GlobalStateContext.Provider value={{ state, setPartialState }}>
+    <GlobalStateContext.Provider value={{ globalState, setGlobalState }}>
       {children}
     </GlobalStateContext.Provider>
   );
