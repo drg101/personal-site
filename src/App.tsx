@@ -5,7 +5,7 @@ import { Grid } from '@material-ui/core';
 import Header from './header/Header';
 import Main from './main/Main';
 import UrlParams from './lib/UrlParams';
-import Store from './globalState/Store';
+import {GlobalStateProvider} from './globalState/GlobalStateProvider';
 
 
 const pages = [ "home", "account", "tokens" ];
@@ -21,19 +21,14 @@ else if (urlOptions.contract) {
 
 function App() {
     const defaultPage = pages[ 0 ];
-    const [ currentPage, setCurrentPage ] = useState(defaultPageFromParams ?? pages[ 0 ]);
-
     return (
-        <Store>
+        <GlobalStateProvider>
             <div className="App">
                 <Grid container>
                     <Grid item xs={12}>
                         <Header
                             pages={pages}
                             hiddenPages={hiddenPages}
-                            currentPage={currentPage}
-                            setCurrentPage={setCurrentPage}
-                            defaultPage={defaultPage}
                         />
                     </Grid>
 
@@ -41,14 +36,11 @@ function App() {
                         <Main
                             pages={pages}
                             hiddenPages={hiddenPages}
-                            currentPage={currentPage}
-                            defaultPage={defaultPage}
-                            setCurrentPage={setCurrentPage}
                         />
                     </Grid>
                 </Grid>
             </div>
-        </Store>
+        </GlobalStateProvider>
     );
 }
 
