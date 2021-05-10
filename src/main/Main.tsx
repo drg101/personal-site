@@ -19,7 +19,9 @@ function renderMain(pageId: string) {
 export default function Main(props: PageInfo) {
     const { globalState } = useGlobalState();
     const { page } = globalState;
-    return <Grid container>
-        {renderMain(page)}
+    return <Grid container className="content" alignItems="center" alignContent="center" justify="center">
+        <Grid item xs={12} md={8}>   
+            {renderMain(page)}
+        </Grid>
     </Grid>
 }

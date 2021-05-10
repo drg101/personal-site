@@ -1,5 +1,4 @@
-import { Grid, Typography, ThemeProvider, Button } from '@material-ui/core';
-import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
+import { Grid, Typography, Button } from '@material-ui/core';
 import PageInfo from '../interfaces/PageInfo';
 import blackLogo from '../static/images/TokenHub_white.svg';
 import { useContext, useState } from 'react';
@@ -7,12 +6,7 @@ import { useGlobalState } from '../globalState/GlobalStateProvider'
 import Constants from '../globalState/Constants'
 declare const window: any;
 
-let theme = createMuiTheme({
-    typography: {
-        fontFamily: 'Fredoka One, cursive'
-    }
-});
-theme = responsiveFontSizes(theme);
+
 let connectingToWallet = false;
 
 export default function Header(props: PageInfo) {
@@ -23,21 +17,21 @@ export default function Header(props: PageInfo) {
         return wrapHeaderItem(
             <Button variant="contained" onClick={async () => {
                 const ethereum = window?.ethereum;
-                if(!connectingToWallet && !globalAddressExists && ethereum){
+                if (!connectingToWallet && !globalAddressExists && ethereum) {
                     connectingToWallet = true;
-                    const accounts:string[] = await ethereum.request({ method: 'eth_requestAccounts' });
-                    if(accounts[0]){
-                        setGlobalState({address: accounts[0]});
+                    const accounts: string[] = await ethereum.request({ method: 'eth_requestAccounts' });
+                    if (accounts[ 0 ]) {
+                        setGlobalState({ address: accounts[ 0 ] });
                     }
                     connectingToWallet = false;
                 }
-                else if(globalAddressExists){
-                    setGlobalState({page: 'account'});
+                else if (globalAddressExists) {
+                    setGlobalState({ page: 'account' });
                 }
             }}>
-                {globalAddressExists ? `${globalState.address.substr(0,8)}...` : "Connect" } 
+                {globalAddressExists ? `${globalState.address.substr(0, 8)}...` : "Connect"}
             </Button>
-        , key);
+            , key);
     }
 
     function wrapHeaderItem(item: JSX.Element, key: number = 0) {
@@ -61,15 +55,13 @@ export default function Header(props: PageInfo) {
     }
 
     return <Grid container className="Header">
-        <ThemeProvider theme={theme}>
-            {wrapHeaderItem(<img
-                src={blackLogo}
-                alt="TokenHub"
-                className="logo"
-                onClick={() => { setGlobalState({ page: Constants.defaultPage }) }}
-            />)
-            }
-            {createHeaderItems()}
-        </ThemeProvider>
+        {wrapHeaderItem(<img
+            src={blackLogo}
+            alt="TokenHub"
+            className="logo"
+            onClick={() => { setGlobalState({ page: Constants.defaultPage }) }}
+        />)
+        }
+        {createHeaderItems()}
     </Grid>
 }
