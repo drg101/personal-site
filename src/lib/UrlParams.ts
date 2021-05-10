@@ -2,6 +2,7 @@ export default function UrlParams(){
     const urlParams = new URLSearchParams(window.location.search);
     return {
         address: urlParams.get("address"),
-        contract: urlParams.get("contract")
+        contract: urlParams.get("contract"),
+        page: urlParams.get("page")
     }
 }

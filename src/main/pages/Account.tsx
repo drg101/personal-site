@@ -32,12 +32,15 @@ export default function Account() {
                 return;
             }
             setAddressStatus(addressStatusEnum.bad)
-        })
+        })();
     }, [ address ]);
+
+    return <Grid container>
+        <Grid item>
+            {JSON.stringify(addressStatus)}
+            {JSON.stringify(addressInfo)}
+        </Grid>
+    </Grid>
 }
 
 
-
-function render() {
-
-}

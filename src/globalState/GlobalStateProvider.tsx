@@ -15,10 +15,19 @@ const GlobalStateProvider = ({
 }) => {
     const [ globalState, setState ] = useState(value);
     const setGlobalState = (update: Partial<GlobalStateInterface>) => {
-        setState({
-          ...globalState,
-          ...update
-        });
+        const newState = {
+            ...globalState,
+            ...update
+        };
+        // let globalStateToPush = `/?`;
+        // for(const [key,value] of Object.entries(newState)){
+        //     if(value.length){
+        //         globalStateToPush += `${key}=${value}&`
+        //     }
+        // }
+        // globalStateToPush = globalStateToPush.substr(0,globalStateToPush.length - 1);
+        // window.history.pushState(null, '', globalStateToPush);
+        setState(newState);
     }
     return (
         <GlobalStateContext.Provider value={{ globalState, setGlobalState }}>

@@ -6,23 +6,17 @@ import Header from './header/Header';
 import Main from './main/Main';
 import UrlParams from './lib/UrlParams';
 import {GlobalStateProvider} from './globalState/GlobalStateProvider';
+import Constants from './globalState/Constants';
 
 
 const pages = [ "home", "account", "tokens" ];
 const hiddenPages = [ "token" ]
 const urlOptions = UrlParams();
-let defaultPageFromParams: string;
-if (urlOptions.address) {
-    defaultPageFromParams = "account"
-}
-else if (urlOptions.contract) {
-    defaultPageFromParams = "token"
-}
 
 function App() {
     const defaultPage = pages[ 0 ];
     return (
-        <GlobalStateProvider value={{page: "home", contract: "", address: ""}}>
+        <GlobalStateProvider value={{page: urlOptions.page ?? Constants.defaultPage, contract: urlOptions.contract ?? "", address: urlOptions.address ?? ""}}>
             <div className="App">
                 <Grid container>
                     <Grid item xs={12}>
