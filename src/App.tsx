@@ -10,8 +10,6 @@ import Constants from './globalState/Constants';
 import theme from './globalState/MuiTheme'
 
 
-const pages = [ "home", "account", "tokens" ];
-const hiddenPages = [ "token" ]
 const urlOptions = UrlParams();
 
 function App() {

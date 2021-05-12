@@ -19,9 +19,7 @@ const GlobalStateProvider = ({
             ...globalState,
             ...update
         };
-        let globalStateToPush = `/${newState.page === "home" ? "" : `?page=${newState.page}`}`;
-        //globalStateToPush = globalStateToPush.substr(0,globalStateToPush.length - 1);
-        window.history.pushState(null, '', globalStateToPush);
+        window.history.pushState(null, '', `/${newState.page === "home" ? "" : `?page=${newState.page}`}`);
         setState(newState);
     }
     return (

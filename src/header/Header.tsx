@@ -22,20 +22,13 @@ export default function Header() {
 
     function createHeaderItems() {
         let headerKey = 1;
-        return Constants.pages.filter(pageName => pageName !== Constants.defaultPage).map(pageName => {
+        return Constants.pages.map(pageName => {
             const displayName = pageName.replace(/(?:^|\s)\S/g, function (a: string) { return a.toUpperCase(); });
             return createHeaderItem(pageName, headerKey++);
         })
     }
 
     return <Grid container className="Header">
-        {wrapHeaderItem(<img
-            src={blackLogo}
-            alt="logo"
-            className="logo"
-            onClick={() => { setGlobalState({ page: Constants.defaultPage }) }}
-        />)
-        }
         {createHeaderItems()}
     </Grid>
 }
