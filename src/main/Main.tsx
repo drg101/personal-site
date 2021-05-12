@@ -1,22 +1,17 @@
 import { Grid } from '@material-ui/core';
 import PageInfo from '../interfaces/PageInfo';
 import { useGlobalState } from '../globalState/GlobalStateProvider'
-import Account from './pages/Account';
 
 function renderMain(pageId: string) {
     switch (pageId) {
         case "home": 
             return <div>home</div>
-        case "account":
-            return <Account/>
-        case "tokens":
-            return <div>tokens</div>
-        case "token":
-            return <div>token</div>
+        case "page1":
+            return <div>page1</div>
     }
 }
 
-export default function Main(props: PageInfo) {
+export default function Main() {
     const { globalState } = useGlobalState();
     const { page } = globalState;
     return <Grid container className="content" alignItems="center" alignContent="center" justify="center">

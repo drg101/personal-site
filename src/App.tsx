@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import { Grid, ThemeProvider } from '@material-ui/core';
 import Header from './header/Header';
 import Main from './main/Main';
@@ -15,24 +15,21 @@ const hiddenPages = [ "token" ]
 const urlOptions = UrlParams();
 
 function App() {
-    const defaultPage = pages[ 0 ];
     return (
-        <GlobalStateProvider value={{ page: urlOptions.page ?? Constants.defaultPage, contract: urlOptions.contract ?? "", address: urlOptions.address ?? "" }}>
+        <GlobalStateProvider value={{ page: urlOptions.page ?? Constants.defaultPage}}>
             <ThemeProvider theme={theme}>
                 <div className="App">
                     <Grid container>
                         <Grid item xs={12}>
-                            <Header
-                                pages={pages}
-                                hiddenPages={hiddenPages}
-                            />
+                            <Header/>
                         </Grid>
 
                         <Grid item xs={12}>
-                            <Main
-                                pages={pages}
-                                hiddenPages={hiddenPages}
-                            />
+                            <Main/>
+                        </Grid>
+
+                        <Grid item xs={12}>
+                            
                         </Grid>
                     </Grid>
                 </div>

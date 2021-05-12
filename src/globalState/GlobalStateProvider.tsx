@@ -19,14 +19,9 @@ const GlobalStateProvider = ({
             ...globalState,
             ...update
         };
-        // let globalStateToPush = `/?`;
-        // for(const [key,value] of Object.entries(newState)){
-        //     if(value.length){
-        //         globalStateToPush += `${key}=${value}&`
-        //     }
-        // }
-        // globalStateToPush = globalStateToPush.substr(0,globalStateToPush.length - 1);
-        // window.history.pushState(null, '', globalStateToPush);
+        let globalStateToPush = `/${newState.page === "home" ? "" : `?page=${newState.page}`}`;
+        //globalStateToPush = globalStateToPush.substr(0,globalStateToPush.length - 1);
+        window.history.pushState(null, '', globalStateToPush);
         setState(newState);
     }
     return (
