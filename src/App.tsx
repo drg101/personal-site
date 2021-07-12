@@ -14,6 +14,8 @@ import 'firebase/analytics'
 import 'firebase/auth'
 import { useAuthState } from 'react-firebase-hooks/auth'
 
+import CssBaseline from '@material-ui/core/CssBaseline';
+
 if (!firebase.apps.length) {
     firebase.initializeApp({
         apiKey: "AIzaSyBvD7-f4eMOjpfGSdo3HNPy716zSPsqBdg",
@@ -41,6 +43,7 @@ function App() {
             user
         }}>
             <ThemeProvider theme={theme}>
+                <CssBaseline/>
                 <div className="App">
                     <Grid container>
                         <Grid item xs={12}>
