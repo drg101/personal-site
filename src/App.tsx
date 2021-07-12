@@ -9,12 +9,37 @@ import { GlobalStateProvider } from './globalState/GlobalStateProvider';
 import Constants from './globalState/Constants';
 import theme from './globalState/MuiTheme'
 
+import firebase from 'firebase/app';
+import 'firebase/analytics'
+import 'firebase/auth'
+import { useAuthState } from 'react-firebase-hooks/auth'
+
+if (!firebase.apps.length) {
+    firebase.initializeApp({
+        apiKey: "AIzaSyBvD7-f4eMOjpfGSdo3HNPy716zSPsqBdg",
+        authDomain: "personal-site-fe4ac.firebaseapp.com",
+        projectId: "personal-site-fe4ac",
+        storageBucket: "personal-site-fe4ac.appspot.com",
+        messagingSenderId: "903886659632",
+        appId: "1:903886659632:web:c2a57ce44fc9eb39674df5",
+        measurementId: "G-MMYEDGE4RM"
+    })
+}
+
+
+
+const auth = firebase.auth();
+
 
 const urlOptions = UrlParams();
 
 function App() {
+    const [user] = useAuthState(auth);
     return (
-        <GlobalStateProvider value={{ page: urlOptions.page ?? Constants.defaultPage}}>
+        <GlobalStateProvider value={{ 
+            page: urlOptions.page ?? Constants.defaultPage,
+            user
+        }}>
             <ThemeProvider theme={theme}>
                 <div className="App">
                     <Grid container>
@@ -33,7 +58,6 @@ function App() {
                 </div>
             </ThemeProvider>
         </GlobalStateProvider>
-
     );
 }
 

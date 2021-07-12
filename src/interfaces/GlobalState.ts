@@ -1,3 +1,4 @@
 export default interface GlobalState {
-    page: string
+    page: string,
+    user: any
 }
