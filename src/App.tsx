@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.scss';
-import { Grid, ThemeProvider } from '@material-ui/core';
+import { Grid, ThemeProvider, makeStyles } from '@material-ui/core';
 import Header from './header/Header';
 import Main from './main/Main';
 import UrlParams from './lib/UrlParams';
 import { GlobalStateProvider } from './globalState/GlobalStateProvider';
 import Constants from './globalState/Constants';
 import theme from './globalState/MuiTheme'
+import BgImage from './static/images/bgMain.JPG'
+import { getImageSize } from './lib/Util';
 
 import firebase from 'firebase/app';
 import 'firebase/analytics'
@@ -28,7 +30,14 @@ if (!firebase.apps.length) {
     })
 }
 
+const useStyles = makeStyles({
+    bg: {
+        backgroundImage: `url(${BgImage})`,
+        height: '100vh',
+        width: '100vw'
+    },
 
+})
 
 const auth = firebase.auth();
 
@@ -37,6 +46,7 @@ const urlOptions = UrlParams();
 
 function App() {
     const [user] = useAuthState(auth);
+    const classes = useStyles()
     return (
         <GlobalStateProvider value={{ 
             page: urlOptions.page ?? Constants.defaultPage,
@@ -45,19 +55,7 @@ function App() {
             <ThemeProvider theme={theme}>
                 <CssBaseline/>
                 <div className="App">
-                    <Grid container>
-                        <Grid item xs={12}>
-                            <Header/>
-                        </Grid>
-
-                        <Grid item xs={12}>
-                            <Main/>
-                        </Grid>
-
-                        <Grid item xs={12}>
-                            
-                        </Grid>
-                    </Grid>
+                    <div className={classes.bg}></div>
                 </div>
             </ThemeProvider>
         </GlobalStateProvider>
