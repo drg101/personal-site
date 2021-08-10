@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.scss';
 import { Grid, ThemeProvider, makeStyles } from '@material-ui/core';
@@ -9,7 +9,8 @@ import { GlobalStateProvider } from './globalState/GlobalStateProvider';
 import Constants from './globalState/Constants';
 import theme from './globalState/MuiTheme'
 import BgImage from './static/images/bgMain.JPG'
-import { getImageSize } from './lib/Util';
+import { getImageSize, imageSizeType } from './lib/Util';
+import useWindowSize from './hooks/useWindowSize';
 
 import firebase from 'firebase/app';
 import 'firebase/analytics'
@@ -30,32 +31,44 @@ if (!firebase.apps.length) {
     })
 }
 
-const useStyles = makeStyles({
-    bg: {
-        backgroundImage: `url(${BgImage})`,
-        height: '100vh',
-        width: '100vw'
-    },
-
-})
-
 const auth = firebase.auth();
-
+const defaultSize: imageSizeType = { height: 900, width: 1600 }
 
 const urlOptions = UrlParams();
 
 function App() {
     const [user] = useAuthState(auth);
-    const classes = useStyles()
+    const [bgImageSize, setBgImageSize] = useState(defaultSize as imageSizeType);
+    const size = useWindowSize();
+
+    useEffect(() => {
+        (async () => {
+            const imageSize = await getImageSize(`${BgImage}`)
+            setBgImageSize(imageSize)
+        })();
+    }, []);
+
+    console.log(bgImageSize)
+    const bgSizing: imageSizeType = {
+        width: size.width ?? 1600,
+        height: bgImageSize.height / bgImageSize.width * (size.width ?? 1600)
+    }
+
     return (
-        <GlobalStateProvider value={{ 
+        <GlobalStateProvider value={{
             page: urlOptions.page ?? Constants.defaultPage,
             user
         }}>
             <ThemeProvider theme={theme}>
-                <CssBaseline/>
+                <CssBaseline />
                 <div className="App">
-                    <div className={classes.bg}></div>
+                    <div style={{
+                        backgroundImage: `url(${BgImage})`,
+                        height: '100vh',
+                        width: '100vw',
+                        backgroundSize: `${bgSizing.width}px ${bgSizing.height}px`,
+                        backgroundRepeat: 'no-repeat'
+                    }}></div>
                 </div>
             </ThemeProvider>
         </GlobalStateProvider>

@@ -15,13 +15,13 @@ export const isValidAddress: (address: string) => boolean = (address) => {
     return address.length === 42;
 }
 
-interface imageSize {
+export interface imageSizeType {
     width: number,
     height: number
 }
 
-export const getImageSize = async (url: string): Promise<imageSize> => {
-    return new Promise<imageSize>(resolve => {
+export const getImageSize = async (url: string): Promise<imageSizeType> => {
+    return new Promise<imageSizeType>(resolve => {
         const img = new Image();
         img.onload = function () {
             const { height, width } = img;
