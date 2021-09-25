@@ -2,6 +2,7 @@ import { Grid, Typography } from '@material-ui/core';
 import PageInfo from '../interfaces/PageInfo';
 import { useGlobalState } from '../globalState/GlobalStateProvider'
 import Home from './Home';
+import About from './About'
 import './Main.scss'
 import { CSSProperties } from 'react';
 
@@ -9,8 +10,8 @@ function renderMain(pageId: string) {
     switch (pageId) {
         case "home":
             return <Home />
-        case "page1":
-            return <div>page1</div>
+        case "about":
+            return <About />
     }
 }
 

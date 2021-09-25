@@ -6,7 +6,7 @@ let theme = createMuiTheme({
         fontFamily: 'Roboto, sans-serif'
     },
     palette: {
-        type: "dark"
+        type: "light"
     }
 });
 theme = responsiveFontSizes(theme);

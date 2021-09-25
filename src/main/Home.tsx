@@ -15,11 +15,9 @@ export default function Home() {
     const renderCategory = (label: string, image: any, page: string) => {
         return <Grid item xs={12} sm={12} md={6} className="category">
             <Paper className='categoryContent' elevation={10} onClick={() => {
-                
+                setGlobalState({ page })
             }}>
-                <div className='categoryContentImage' style={{
-                    backgroundImage: `url(${image})`
-                }} />
+                <img className='categoryContentImage' src={image} />
                 <div className='categoryContentText'>
                     <Typography variant="h3" style={{
                     }}>{label}</Typography>
