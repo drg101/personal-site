@@ -4,6 +4,7 @@ import { useGlobalState } from '../globalState/GlobalStateProvider'
 import Home from './Home';
 import About from './About'
 import Contact from './Contact';
+import Resume from './Resume'
 import './Main.scss'
 import { CSSProperties } from 'react';
 
@@ -15,6 +16,8 @@ function renderMain(pageId: string) {
             return <About />
         case "contact":
             return <Contact />
+        case "resume": 
+            return <Resume /> 
     }
 }
 

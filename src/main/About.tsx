@@ -52,7 +52,7 @@ export default function About() {
                 <br />
             </Typography>
             <Grid container>
-                <Grid item xs={12} justify='center'>
+                <Grid item xs={12}>
                     <Button variant="contained" color='primary' style={{
                         margin: '15px'
                     }} onClick={() => {

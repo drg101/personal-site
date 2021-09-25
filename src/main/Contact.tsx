@@ -56,7 +56,7 @@ export default function Contact() {
         <Grid item xs={12}>
             <Divider />
             <br />
-            <Typography variant="h4">My Various Socials</Typography>
+            <Typography variant="h4">My Various Socials.</Typography>
             <br />
             {makeSocialImage(LinkedIn, 'https://www.linkedin.com/in/daniel-reynolds-software-engineer')}
             {makeSocialImage(GitHub, 'https://github.com/drg101')}
