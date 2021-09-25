@@ -4,6 +4,7 @@ import { useGlobalState } from '../globalState/GlobalStateProvider'
 import './Main.scss';
 import BgMain from "../static/images/bgMain.JPG"
 import Skills from "../static/images/darkModeResume.png"
+import SkillsLight from "../static/images/lightModeResume.png"
 import PortfolioImg from "../static/images/aper1.png"
 import DanielImg from "../static/images/danielv1.JPG"
 import Sunset from "../static/images/sunset.jpg"
@@ -29,7 +30,7 @@ export default function Home() {
     return <Grid container>
         {renderCategory("About Me", DanielImg, "about")}
         {renderCategory("Contact", Sunset, "contact")}
-        {renderCategory("Resume", Skills, "resume")}
+        {renderCategory("Resume", window.darkMode ? Skills : SkillsLight, "resume")}
         {renderCategory("Portfolio", PortfolioImg, "portfolio")}
     </Grid>
 }

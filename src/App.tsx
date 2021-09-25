@@ -22,8 +22,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 
 const urlOptions = UrlParams();
 
-const darkMode = localStorage.getItem("darkMode") === "true" || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
-
 function App() {
     const size = useWindowSize();
 
@@ -36,8 +34,7 @@ function App() {
     return (
         <GlobalStateProvider value={{
             page: urlOptions.page ?? Constants.defaultPage,
-            user: null,
-            darkMode
+            user: null
         }}>
             <ThemeProvider theme={theme}>
                 <CssBaseline />
