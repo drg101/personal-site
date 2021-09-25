@@ -36,7 +36,9 @@ export default function Contact() {
                                     By Email
                                 </TableCell>
                                 <TableCell>
-                                    <a href="danielreynolds101@gmail.com">danielreynolds101@gmail.com</a>
+                                    <a href="mailto: danielreynolds101@gmail.com" style={{
+                                        textDecoration: "none"
+                                    }} target="_blank"><Typography color="primary">danielreynolds101@gmail.com</Typography></a>
                                 </TableCell>
                             </TableRow>
                             <TableRow>
@@ -44,7 +46,9 @@ export default function Contact() {
                                     LinkedIn
                                 </TableCell>
                                 <TableCell>
-                                    <a href="linkedin.com/in/daniel-reynolds-software-engineer">linkedin.com/in/daniel-reynolds-software-engineer</a>
+                                    <a href="https://linkedin.com/in/daniel-reynolds-software-engineer" style={{
+                                        textDecoration: "none"
+                                    }} target="_blank"><Typography color="primary">linkedin.com/in/daniel-reynolds-software-engineer</Typography></a>
                                 </TableCell>
                             </TableRow>
                         </TableBody>
