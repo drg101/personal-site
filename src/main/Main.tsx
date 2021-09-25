@@ -3,6 +3,7 @@ import PageInfo from '../interfaces/PageInfo';
 import { useGlobalState } from '../globalState/GlobalStateProvider'
 import Home from './Home';
 import './Main.scss'
+import { CSSProperties } from 'react';
 
 function renderMain(pageId: string) {
     switch (pageId) {
@@ -17,12 +18,13 @@ export default function Main() {
     const { globalState, setGlobalState } = useGlobalState();
     const { page } = globalState;
 
-    const createHeaderItem = (text: string, page: string) => {
+    const createHeaderItem = (text: string, page: string, bold=false) => {
+        const textStyle = bold ? { fontWeight: 'bold'} : {}
         return <div style={{display: 'inline-block'}}>
             <div className='headerItem' onClick={() => {
                 setGlobalState({ page })
             }}>
-                <Typography variant='h5'>{text}</Typography>
+                <Typography variant='h5' style={textStyle as CSSProperties}>{text}</Typography>
             </div>
         </div>
     }
@@ -31,8 +33,9 @@ export default function Main() {
                 <Grid item xs={12}>
                     <Grid container className='header'>
                         <Grid item>
-                            {createHeaderItem("Daniel Reynolds", "home")}
+                            {createHeaderItem("Daniel Reynolds", "home", true)}
                             {createHeaderItem("About", "about")}
+                            {createHeaderItem("Contact", "contact")}
                             {createHeaderItem("Resume", "resume")}
                             {createHeaderItem("Portfolio", "portfolio")}
                         </Grid>
