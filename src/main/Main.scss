@@ -5,8 +5,26 @@
 
 .categoryContent {
     transition: all .2s ease-in-out;
+    cursor: pointer;
+    margin: 3vh;
+    border-radius: 10px;
+    background-size: 100%;
+    height: 44vh;
+    border: 3px solid black;
 }
 
 .categoryContent:hover {
-    transform: scale(1.08)
+    transform: scale(1.05)
+}
+
+.categoryContentImage {
+    height: 80%;
+    background-size: 100%;
+}
+
+.categoryContentText {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
