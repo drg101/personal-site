@@ -142,9 +142,13 @@ export default function Main() {
                     </div>
                     <div className='footerItemContainer'>
                         <div className='footerItem'>
-                            <Typography>
-                                Copyright &copy; 2021 Daniel Reynolds
-                            </Typography>
+                            <a href="https://github.com/drg101/personal-site" target="_blank" style={{
+                                textDecoration: "none"
+                            }}>
+                                <Typography color="textPrimary">
+                                    View Source
+                                </Typography>
+                            </a>
                         </div>
                     </div>
                 </Grid>
