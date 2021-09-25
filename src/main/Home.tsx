@@ -4,7 +4,7 @@ import { useGlobalState } from '../globalState/GlobalStateProvider'
 import './Main.scss';
 import BgMain from "../static/images/bgMain.JPG"
 import Skills from "../static/images/skills.png"
-import PortfolioImg from "../static/images/aper1.PNG"
+import PortfolioImg from "../static/images/aper1.png"
 import DanielImg from "../static/images/danielv1.JPG"
 import Sunset from "../static/images/sunset.jpg"
 
