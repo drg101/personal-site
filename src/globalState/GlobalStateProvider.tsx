@@ -21,7 +21,7 @@ const GlobalStateProvider = ({
             ...update
         };
         if(UrlParams().page !== newState.page && !(!UrlParams().page && newState.page === "home")) {
-            window.history.pushState(null, '', `/${newState.page === "home" ? "" : `?page=${newState.page}`}`);
+            window.history.pushState(null, '', `${window.location.pathname}${newState.page === "home" ? "" : `?page=${newState.page}`}`);
         }
         setState(newState);
     }

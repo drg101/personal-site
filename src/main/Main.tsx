@@ -92,7 +92,7 @@ export default function Main() {
 
     const createHeaderItem = (text: string, page: string, bold = false) => {
         const textStyle = bold ? { fontWeight: 'bold' } : {}
-        return <div style={{ display: 'inline-block' }}>
+        return <div style={{ display: 'inline-block', float: 'left' }}>
             <div className='headerItem' onClick={() => {
                 setGlobalState({ page })
             }}>
@@ -104,7 +104,7 @@ export default function Main() {
     return <Grid container className="content" alignItems="center" alignContent="center" justify="center">
         <Grid item xs={12}>
             <Grid container className='header'>
-                <Grid item>
+                <Grid item xs={12}>
                     {createHeaderItem("Daniel Reynolds", "home", true)}
                     {createHeaderItem("About", "about")}
                     {createHeaderItem("Contact", "contact")}
@@ -125,8 +125,12 @@ export default function Main() {
             </Grid>
         </Grid>
         <Grid item xs={12}>
-            <div style={{ margin: globalState.page !== 'home' ? '2vw' : '0', marginLeft: 'auto' }}>
-                {renderMain(page)}
+            <div style={{
+                minHeight: "88vh"
+            }}>
+                <div style={{ margin: globalState.page !== 'home' ? '2vw' : '0', marginLeft: 'auto' }}>
+                    {renderMain(page)}
+                </div>
             </div>
         </Grid>
         <Grid item xs={12}>
