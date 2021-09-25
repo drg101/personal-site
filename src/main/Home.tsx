@@ -28,7 +28,7 @@ export default function Home() {
 
     return <Grid container>
         {renderCategory("About Me", DanielImg, "about")}
-        {renderCategory("Connect", Sunset, "contact")}
+        {renderCategory("Contact", Sunset, "contact")}
         {renderCategory("Resume", Skills, "resume")}
         {renderCategory("Portfolio", PortfolioImg, "portfolio")}
     </Grid>
