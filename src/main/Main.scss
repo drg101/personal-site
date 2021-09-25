@@ -1,0 +1,12 @@
+.category {
+    height: 50vh;
+    overflow: hidden;
+}
+
+.categoryContent {
+    transition: all .2s ease-in-out;
+}
+
+.categoryContent:hover {
+    transform: scale(1.08)
+}

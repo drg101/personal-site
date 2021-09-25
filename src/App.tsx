@@ -11,6 +11,7 @@ import theme from './globalState/MuiTheme'
 import BgImage from './static/images/bgMain.JPG'
 import { getImageSize, imageSizeType } from './lib/Util';
 import useWindowSize from './hooks/useWindowSize';
+import Vector2 from './interfaces/Vector2';
 
 import firebase from 'firebase/app';
 import 'firebase/analytics'
@@ -50,8 +51,13 @@ function App() {
 
     console.log(bgImageSize)
     const bgSizing: imageSizeType = {
-        width: size.width ?? 1600,
-        height: bgImageSize.height / bgImageSize.width * (size.width ?? 1600)
+        width: size.width * 1.2,
+        height: bgImageSize.height / bgImageSize.width * (size.width * 1.2)
+    }
+
+    const bgOffset: Vector2 = {
+        x: 0,
+        y: (size.height - bgSizing.height) / 2
     }
 
     return (
@@ -60,15 +66,8 @@ function App() {
             user
         }}>
             <ThemeProvider theme={theme}>
-                <CssBaseline />
                 <div className="App">
-                    <div style={{
-                        backgroundImage: `url(${BgImage})`,
-                        height: '100vh',
-                        width: '100vw',
-                        backgroundSize: `${bgSizing.width}px ${bgSizing.height}px`,
-                        backgroundRepeat: 'no-repeat'
-                    }}></div>
+                    <Main />
                 </div>
             </ThemeProvider>
         </GlobalStateProvider>
