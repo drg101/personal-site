@@ -5,6 +5,7 @@ import Home from './Home';
 import About from './About'
 import Contact from './Contact';
 import Resume from './Resume'
+import Portfolio from './Portfolio';
 import './Main.scss'
 import { CSSProperties } from 'react';
 
@@ -18,6 +19,8 @@ function renderMain(pageId: string) {
             return <Contact />
         case "resume": 
             return <Resume /> 
+        case "portfolio":
+            return <Portfolio />
     }
 }
 
