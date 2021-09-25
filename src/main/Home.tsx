@@ -8,6 +8,7 @@ import SkillsLight from "../static/images/lightModeResume.png"
 import PortfolioImg from "../static/images/aper1.png"
 import DanielImg from "../static/images/danielv1.JPG"
 import Sunset from "../static/images/sunset.jpg"
+import Email from "../static/images/email.svg"
 
 
 
@@ -29,7 +30,7 @@ export default function Home() {
 
     return <Grid container>
         {renderCategory("About Me", DanielImg, "about")}
-        {renderCategory("Contact", Sunset, "contact")}
+        {renderCategory("Contact", Email, "contact")}
         {renderCategory("Resume", window.darkMode ? Skills : SkillsLight, "resume")}
         {renderCategory("Portfolio", PortfolioImg, "portfolio")}
     </Grid>
