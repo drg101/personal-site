@@ -131,7 +131,7 @@ export default function Main() {
             <div style={{
                 minHeight: "87vh"
             }}>
-                <div className="header" style={{ margin: globalState.page !== 'home' ? '2vh auto 2vh auto' : '0' }}>
+                <div className="header" style={{ paddingTop: globalState.page !== 'home' ? '2vh' : '0', paddingBottom: globalState.page !== 'home' ? '2vh' : '0' }}>
                     {renderMain(page)}
                 </div>
             </div>
