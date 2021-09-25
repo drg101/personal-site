@@ -103,30 +103,33 @@ export default function Main() {
 
     return <Grid container className="content" alignItems="center" alignContent="center" justify="center">
         <Grid item xs={12}>
-            <Grid container className='header'>
+            <Grid container>
                 <Grid item xs={12}>
-                    {createHeaderItem("Daniel Reynolds", "home", true)}
-                    {createHeaderItem("About", "about")}
-                    {createHeaderItem("Contact", "contact")}
-                    {createHeaderItem("Resume", "resume")}
-                    {createHeaderItem("Portfolio", "portfolio")}
-                    <div style={{ display: 'inline-block', float: 'right' }} onClick={() => {
-                        localStorage.setItem("darkMode", !darkModeSwitchValue ? "true" : "false")
-                        window.location.reload();
-                    }}>
-                        <div className='headerItem'>
-                            <FormControlLabel
-                                control={<MaterialUISwitch checked={darkModeSwitchValue} />}
-                                label={darkModeSwitchValue ? 'Dark Mode' : 'Light Mode'}
-                            />
+                    <div className='header'>
+                        {createHeaderItem("Daniel Reynolds", "home", true)}
+                        {createHeaderItem("About", "about")}
+                        {createHeaderItem("Contact", "contact")}
+                        {createHeaderItem("Resume", "resume")}
+                        {createHeaderItem("Portfolio", "portfolio")}
+                        <div style={{ display: 'inline-block', float: 'right' }} onClick={() => {
+                            localStorage.setItem("darkMode", !darkModeSwitchValue ? "true" : "false")
+                            window.location.reload();
+                        }}>
+                            <div className='headerItem'>
+                                <FormControlLabel
+                                    control={<MaterialUISwitch checked={darkModeSwitchValue} />}
+                                    label={darkModeSwitchValue ? 'Dark Mode' : 'Light Mode'}
+                                />
+                            </div>
                         </div>
                     </div>
                 </Grid>
             </Grid>
+            <div className="header"><Divider /></div>
         </Grid>
         <Grid item xs={12}>
             <div style={{
-                minHeight: "88vh"
+                minHeight: "87vh"
             }}>
                 <div style={{ margin: globalState.page !== 'home' ? '2vw' : '0', marginLeft: 'auto' }}>
                     {renderMain(page)}
