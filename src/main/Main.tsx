@@ -7,7 +7,8 @@ import Contact from './Contact';
 import Resume from './Resume'
 import Portfolio from './Portfolio';
 import './Main.scss'
-import { CSSProperties } from 'react';
+import { CSSProperties, useEffect } from 'react';
+import UrlParams from '../lib/UrlParams';
 
 function renderMain(pageId: string) {
     switch (pageId) {
@@ -17,8 +18,8 @@ function renderMain(pageId: string) {
             return <About />
         case "contact":
             return <Contact />
-        case "resume": 
-            return <Resume /> 
+        case "resume":
+            return <Resume />
         case "portfolio":
             return <Portfolio />
     }
@@ -27,6 +28,15 @@ function renderMain(pageId: string) {
 export default function Main() {
     const { globalState, setGlobalState } = useGlobalState();
     const { page } = globalState;
+
+    useEffect(() => {
+        window.onpopstate = () => {
+            const newUrlOptions = UrlParams();
+            if (newUrlOptions.page) {
+                setGlobalState({ page: newUrlOptions.page })
+            }
+        };
+    }, [])
 
     const createHeaderItem = (text: string, page: string, bold = false) => {
         const textStyle = bold ? { fontWeight: 'bold' } : {}

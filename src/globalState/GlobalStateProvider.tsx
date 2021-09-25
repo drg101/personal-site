@@ -1,5 +1,6 @@
 import React, { createContext, useState, useContext, Dispatch, SetStateAction } from "react";
 import GlobalStateInterface from '../interfaces/GlobalState'
+import UrlParams from '../lib/UrlParams';
 
 const GlobalStateContext = createContext({
     globalState: {} as GlobalStateInterface,
@@ -19,7 +20,9 @@ const GlobalStateProvider = ({
             ...globalState,
             ...update
         };
-        window.history.pushState(null, '', `/${newState.page === "home" ? "" : `?page=${newState.page}`}`);
+        if(UrlParams().page !== newState.page) {
+            window.history.pushState(null, '', `/${newState.page === "home" ? "" : `?page=${newState.page}`}`);
+        }
         setState(newState);
     }
     return (
