@@ -194,7 +194,7 @@ export default function Portfolio() {
                 </Grid>
                 <Grid container alignItems="center">
                     <Grid item xs={12} md={6}>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/7B3mC9E3kK0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                    <iframe width="100%" height="300" src="https://www.youtube.com/embed/7B3mC9E3kK0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <div className="textPadded">

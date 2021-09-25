@@ -3,7 +3,7 @@ import PageInfo from '../interfaces/PageInfo';
 import { useGlobalState } from '../globalState/GlobalStateProvider'
 import './Main.scss';
 import BgMain from "../static/images/bgMain.JPG"
-import Skills from "../static/images/skills.png"
+import Skills from "../static/images/darkModeResume.png"
 import PortfolioImg from "../static/images/aper1.png"
 import DanielImg from "../static/images/danielv1.JPG"
 import Sunset from "../static/images/sunset.jpg"

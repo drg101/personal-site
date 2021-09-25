@@ -20,7 +20,7 @@ const GlobalStateProvider = ({
             ...globalState,
             ...update
         };
-        if(UrlParams().page !== newState.page) {
+        if(UrlParams().page !== newState.page && !(!UrlParams().page && newState.page === "home")) {
             window.history.pushState(null, '', `/${newState.page === "home" ? "" : `?page=${newState.page}`}`);
         }
         setState(newState);

@@ -111,7 +111,7 @@ export default function Resume() {
             </Typography>
         </Grid>
 
-        <Grid item xs={12}>
+        <Grid item>
             <br />
             <Divider />
             <br />

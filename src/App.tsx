@@ -20,50 +20,24 @@ import { useAuthState } from 'react-firebase-hooks/auth'
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 
-if (!firebase.apps.length) {
-    firebase.initializeApp({
-        apiKey: "AIzaSyBvD7-f4eMOjpfGSdo3HNPy716zSPsqBdg",
-        authDomain: "personal-site-fe4ac.firebaseapp.com",
-        projectId: "personal-site-fe4ac",
-        storageBucket: "personal-site-fe4ac.appspot.com",
-        messagingSenderId: "903886659632",
-        appId: "1:903886659632:web:c2a57ce44fc9eb39674df5",
-        measurementId: "G-MMYEDGE4RM"
-    })
-}
-
-const auth = firebase.auth();
-const defaultSize: imageSizeType = { height: 900, width: 1600 }
-
 const urlOptions = UrlParams();
 
+const darkMode = localStorage.getItem("darkMode") === "true" || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
 function App() {
-    const [user] = useAuthState(auth);
-    const [bgImageSize, setBgImageSize] = useState(defaultSize as imageSizeType);
     const size = useWindowSize();
 
     useEffect(() => {
         (async () => {
             const imageSize = await getImageSize(`${BgImage}`)
-            setBgImageSize(imageSize)
         })();
     }, []);
-
-    console.log(bgImageSize)
-    const bgSizing: imageSizeType = {
-        width: size.width * 1.2,
-        height: bgImageSize.height / bgImageSize.width * (size.width * 1.2)
-    }
-
-    const bgOffset: Vector2 = {
-        x: 0,
-        y: (size.height - bgSizing.height) / 2
-    }
 
     return (
         <GlobalStateProvider value={{
             page: urlOptions.page ?? Constants.defaultPage,
-            user
+            user: null,
+            darkMode
         }}>
             <ThemeProvider theme={theme}>
                 <CssBaseline />

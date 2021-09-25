@@ -35,6 +35,9 @@ export default function Main() {
             if (newUrlOptions.page) {
                 setGlobalState({ page: newUrlOptions.page })
             }
+            else {
+                setGlobalState({ page: 'home' })
+            }
         };
     }, [])
 
