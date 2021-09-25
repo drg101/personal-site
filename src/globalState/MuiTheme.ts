@@ -3,7 +3,7 @@ import { dark } from '@material-ui/core/styles/createPalette';
 
 let theme = createMuiTheme({
     typography: {
-        fontFamily: 'Ubuntu, sans-serif'
+        fontFamily: 'Roboto, sans-serif'
     },
     palette: {
         type: "dark"

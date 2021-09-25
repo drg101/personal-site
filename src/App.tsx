@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.scss';
-import { Grid, ThemeProvider, makeStyles } from '@material-ui/core';
+import { Grid, ThemeProvider, makeStyles, Container } from '@material-ui/core';
 import Header from './header/Header';
 import Main from './main/Main';
 import UrlParams from './lib/UrlParams';
@@ -66,8 +66,11 @@ function App() {
             user
         }}>
             <ThemeProvider theme={theme}>
+                <CssBaseline />
                 <div className="App">
-                    <Main />
+                    <Container maxWidth="lg" >
+                        <Main />
+                    </Container>
                 </div>
             </ThemeProvider>
         </GlobalStateProvider>
