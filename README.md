@@ -1,4 +1,4 @@
-# SPA Template
+# My Personal Site
 #### Built on create-react-app
 #### React + Typescript + Mui = :)
 
