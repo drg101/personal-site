@@ -130,7 +130,7 @@ export default function Main() {
             </div>
         </Grid>
         <Grid item xs={12}>
-            <Divider />
+            <div className="header"><Divider /></div>
             <Grid container className='header'>
                 <Grid item>
                     <div className='footerItemContainer'>

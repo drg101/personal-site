@@ -158,7 +158,7 @@ export default function Portfolio() {
                     <Grid item xs={12} md={6}>
                         <div className="textPadded">
                             <Typography align="left">
-                                For the past year and a half, my primary work as been on an urban sustainablity project, called <a href="https://urban-sustain.org/" target="_blank">Project Sustain</a> here
+                                For the past year and a half, my primary work as been on an urban sustainablity project, called Project Sustain here
                                 at Colorado State Univeristies' Computer Science Department.
                                 <br />
                                 <br />
