@@ -13,6 +13,8 @@ export default function About() {
             <Typography variant='h4'>
                 Hi! I'm Daniel.
             </Typography>
+            <br />
+            <Divider />
         </Grid>
         <Grid item sm={4} xs={12}>
             <img src={DanielImg} className="danielImage" />
