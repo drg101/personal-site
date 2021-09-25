@@ -20,6 +20,7 @@
     margin-top: 3%;
     height: 74%;
     border-radius: 4px;
+    max-width: 100%;
 }
 
 .categoryContentText {
@@ -38,6 +39,14 @@
     padding: 2vh;
     height: 8vh;
     cursor: pointer;
+}
+
+.headerItemLeft {
+    float: left;
+}
+
+.headerItemRight {
+    float: right;
 }
 
 .headerItem:hover {
@@ -80,4 +89,20 @@
 
 .resumeBullets {
     margin-left: 45px;
+}
+
+@media only screen and (max-width: 1000px){
+    /*Tablets [601px -> 1000px]*/
+    .headerItemRight {
+        float: left;
+    }
+}
+@media only screen and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/
+    .headerItemRight, .headerItemLeft {
+        display: block !important;
+    }
+}
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
 }

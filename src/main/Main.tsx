@@ -92,7 +92,7 @@ export default function Main() {
 
     const createHeaderItem = (text: string, page: string, bold = false) => {
         const textStyle = bold ? { fontWeight: 'bold' } : {}
-        return <div style={{ display: 'inline-block', float: 'left' }}>
+        return <div style={{ display: 'inline-block' }} className="headerItemLeft">
             <div className='headerItem' onClick={() => {
                 setGlobalState({ page })
             }}>
@@ -111,7 +111,7 @@ export default function Main() {
                         {createHeaderItem("Contact", "contact")}
                         {createHeaderItem("Resume", "resume")}
                         {createHeaderItem("Portfolio", "portfolio")}
-                        <div style={{ display: 'inline-block', float: 'right' }} onClick={() => {
+                        <div className="headerItemRight" style={{ display: 'inline-block' }} onClick={() => {
                             localStorage.setItem("darkMode", !darkModeSwitchValue ? "true" : "false")
                             window.location.reload();
                         }}>
