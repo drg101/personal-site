@@ -43,13 +43,15 @@ export default function Home() {
         <Grid item xs={12}>
             <br />
             <div style={{
-                display: 'inline-block'
+                display: 'inline-block',
+                verticalAlign: 'top'
             }}>
                 <Typography variant="h2" className={playAnimation ? `typewriter` : ''}>Hi! I'm Daniel.</Typography>
             </div>
             <br />
             <div style={{
-                display: 'inline-block'
+                display: 'inline-block',
+                verticalAlign: 'top'
             }}>
                 <Typography variant="h4" className={playAnimation ? `typewriter2` : ''}>Thanks for checking out my site!</Typography>
             </div>
