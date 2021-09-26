@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/personal-site/static/css/main.f727eaa4.chunk.css",
-    "main.js": "/personal-site/static/js/main.3b5e2e98.chunk.js",
-    "main.js.map": "/personal-site/static/js/main.3b5e2e98.chunk.js.map",
+    "main.js": "/personal-site/static/js/main.8435eff0.chunk.js",
+    "main.js.map": "/personal-site/static/js/main.8435eff0.chunk.js.map",
     "runtime-main.js": "/personal-site/static/js/runtime-main.a394bae3.js",
     "runtime-main.js.map": "/personal-site/static/js/runtime-main.a394bae3.js.map",
     "static/js/2.c9bc3e77.chunk.js": "/personal-site/static/js/2.c9bc3e77.chunk.js",
@@ -24,7 +24,7 @@
     "static/media/darkModeResume.dea7ef58.png": "/personal-site/static/media/darkModeResume.dea7ef58.png",
     "static/media/fastLoad.a565f6a1.gif": "/personal-site/static/media/fastLoad.a565f6a1.gif",
     "static/media/github.ff264807.png": "/personal-site/static/media/github.ff264807.png",
-    "static/media/githubHQ.fe3aca93.png": "/personal-site/static/media/githubHQ.fe3aca93.png",
+    "static/media/githubHQ.eeb8324d.png": "/personal-site/static/media/githubHQ.eeb8324d.png",
     "static/media/infospaces.5abddf6a.png": "/personal-site/static/media/infospaces.5abddf6a.png",
     "static/media/instagram.30c4a6fe.png": "/personal-site/static/media/instagram.30c4a6fe.png",
     "static/media/lightModeResume.cfcb99b1.png": "/personal-site/static/media/lightModeResume.cfcb99b1.png",
@@ -36,6 +36,6 @@
     "static/js/runtime-main.a394bae3.js",
     "static/js/2.c9bc3e77.chunk.js",
     "static/css/main.f727eaa4.chunk.css",
-    "static/js/main.3b5e2e98.chunk.js"
+    "static/js/main.8435eff0.chunk.js"
   ]
 }
