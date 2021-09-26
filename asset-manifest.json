@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/personal-site/static/css/main.584bd0ba.chunk.css",
-    "main.js": "/personal-site/static/js/main.1e5d1c1d.chunk.js",
-    "main.js.map": "/personal-site/static/js/main.1e5d1c1d.chunk.js.map",
-    "runtime-main.js": "/personal-site/static/js/runtime-main.4a70fb5b.js",
-    "runtime-main.js.map": "/personal-site/static/js/runtime-main.4a70fb5b.js.map",
-    "static/js/2.2a371be6.chunk.js": "/personal-site/static/js/2.2a371be6.chunk.js",
-    "static/js/2.2a371be6.chunk.js.map": "/personal-site/static/js/2.2a371be6.chunk.js.map",
-    "static/js/3.eb9b0ea1.chunk.js": "/personal-site/static/js/3.eb9b0ea1.chunk.js",
-    "static/js/3.eb9b0ea1.chunk.js.map": "/personal-site/static/js/3.eb9b0ea1.chunk.js.map",
+    "main.css": "/personal-site/static/css/main.f727eaa4.chunk.css",
+    "main.js": "/personal-site/static/js/main.2ec1d4df.chunk.js",
+    "main.js.map": "/personal-site/static/js/main.2ec1d4df.chunk.js.map",
+    "runtime-main.js": "/personal-site/static/js/runtime-main.a394bae3.js",
+    "runtime-main.js.map": "/personal-site/static/js/runtime-main.a394bae3.js.map",
+    "static/js/2.31a5d819.chunk.js": "/personal-site/static/js/2.31a5d819.chunk.js",
+    "static/js/2.31a5d819.chunk.js.map": "/personal-site/static/js/2.31a5d819.chunk.js.map",
+    "static/js/3.21b848e0.chunk.js": "/personal-site/static/js/3.21b848e0.chunk.js",
+    "static/js/3.21b848e0.chunk.js.map": "/personal-site/static/js/3.21b848e0.chunk.js.map",
     "index.html": "/personal-site/index.html",
-    "static/css/main.584bd0ba.chunk.css.map": "/personal-site/static/css/main.584bd0ba.chunk.css.map",
-    "static/js/2.2a371be6.chunk.js.LICENSE.txt": "/personal-site/static/js/2.2a371be6.chunk.js.LICENSE.txt",
+    "static/css/main.f727eaa4.chunk.css.map": "/personal-site/static/css/main.f727eaa4.chunk.css.map",
+    "static/js/2.31a5d819.chunk.js.LICENSE.txt": "/personal-site/static/js/2.31a5d819.chunk.js.LICENSE.txt",
     "static/media/TrueNorthHQ.35b93812.jpg": "/personal-site/static/media/TrueNorthHQ.35b93812.jpg",
     "static/media/aper1.2daf6b18.png": "/personal-site/static/media/aper1.2daf6b18.png",
     "static/media/aper2.377948a8.PNG": "/personal-site/static/media/aper2.377948a8.PNG",
@@ -21,19 +21,19 @@
     "static/media/daniel.db78ff83.jpg": "/personal-site/static/media/daniel.db78ff83.jpg",
     "static/media/danielv1.1b7e1421.JPG": "/personal-site/static/media/danielv1.1b7e1421.JPG",
     "static/media/darkModeResume.dea7ef58.png": "/personal-site/static/media/darkModeResume.dea7ef58.png",
-    "static/media/email.0e360d89.svg": "/personal-site/static/media/email.0e360d89.svg",
     "static/media/fastLoad.a565f6a1.gif": "/personal-site/static/media/fastLoad.a565f6a1.gif",
     "static/media/github.ff264807.png": "/personal-site/static/media/github.ff264807.png",
     "static/media/infospaces.5abddf6a.png": "/personal-site/static/media/infospaces.5abddf6a.png",
     "static/media/instagram.30c4a6fe.png": "/personal-site/static/media/instagram.30c4a6fe.png",
     "static/media/lightModeResume.cfcb99b1.png": "/personal-site/static/media/lightModeResume.cfcb99b1.png",
     "static/media/linkedin.7a5eab93.png": "/personal-site/static/media/linkedin.7a5eab93.png",
+    "static/media/paperAirplane.e8a7d690.jpg": "/personal-site/static/media/paperAirplane.e8a7d690.jpg",
     "static/media/youtube.6f9e32ba.png": "/personal-site/static/media/youtube.6f9e32ba.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.4a70fb5b.js",
-    "static/js/2.2a371be6.chunk.js",
-    "static/css/main.584bd0ba.chunk.css",
-    "static/js/main.1e5d1c1d.chunk.js"
+    "static/js/runtime-main.a394bae3.js",
+    "static/js/2.31a5d819.chunk.js",
+    "static/css/main.f727eaa4.chunk.css",
+    "static/js/main.2ec1d4df.chunk.js"
   ]
 }
