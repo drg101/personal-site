@@ -11,6 +11,8 @@ import FastLoad from "../static/images/fastLoad.gif"
 import Infospaces from "../static/images/infospaces.png"
 import TrueNorthHQ from "../static/images/TrueNorthHQ.jpg"
 import Aper2Pic from "../static/images/aper2.PNG"
+import AlgosJupy from "../static/images/algosJupy.png"
+import GithubHQ from "../static/images/githubHQ.png"
 
 
 interface Project {
@@ -31,7 +33,7 @@ export default function Portfolio() {
                     <br />
                     <Divider />
                     <br />
-                    <Paper style={{padding: '1vw'}}>
+                    <Paper style={{ padding: '1vw' }}>
                         <a href={`#${project.name}`} style={{
                             textDecoration: 'none'
                         }}>
@@ -105,6 +107,64 @@ export default function Portfolio() {
         dates: 'January 2019 → July 2019'
     }
 
+    const cryptographyLib: Project = {
+        content: (
+            <Grid container>
+                <Grid container alignItems="center">
+                    <Grid item xs={12} md={6}>
+                        <img src={AlgosJupy} style={{
+                            width: '100%'
+                        }} />
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <div className="textPadded">
+                            <Typography align="left">
+                                &emsp;&emsp;For the spring semester of 2021, I decided to take the "Mathematic of Information Security," also known as cryptography. The proffessor for this
+                                class was awesome, and let us build our own programming libraries to use for homework and tests.
+                            </Typography>
+                            <Typography align="left">
+                                &emsp;&emsp;So logically, I started writing an absolutely massive amount of Python for this class, implementing every single algorithm, theorem, and formula we learned.
+                                This code is now all available on GitHub, totaling to over 60+ files. This library features some cool stuff like:
+                            </Typography>
+                            <div className="MuiTypography-alignLeft MuiTypography-root MuiTypography-body1">
+                                <ul>
+                                    <li>
+                                        RSA from scratch.
+                                    </li>
+                                    <li>
+                                        Diffie-Hellman from scratch.
+                                    </li>
+                                    <li>
+                                        Zero-Knowledge-Proofs from scratch.
+                                    </li>
+                                    <li>
+                                        Optimized methods for the fast execution of cryptographic functions.
+                                    </li>
+                                    <li>
+                                        Fast, giant prime creation.
+                                    </li>
+                                </ul>
+                            </div>
+                            <Grid container>
+                                <Grid item>
+                                    <Button variant="contained" color='primary' style={{
+                                        margin: '15px',
+                                        marginLeft: '0'
+                                    }} onClick={() => {
+                                        window.open('https://github.com/drg101/M360-algos', '_blank')
+                                    }}>View it On GitHub</Button>
+                                </Grid>
+                            </Grid>
+                        </div>
+                    </Grid>
+                </Grid>
+            </Grid>
+        ),
+        timeStart: new Date('1/23/2021').valueOf(),
+        name: "Cryptography Python Library",
+        dates: 'January 2021 → May 2021'
+    }
+
     const infospaces: Project = {
         content: (
             <Grid container>
@@ -117,7 +177,7 @@ export default function Portfolio() {
                     <Grid item xs={12} md={6}>
                         <div className="textPadded">
                             <Typography align="left">
-                                In the spring of 2020, before I transitioned primarily to research, I worked on a video site specifically for CSU Computer Science Students. For this site, I
+                                In the spring of 2020, before I transitioned primarily to research, I worked on a video site specifically for CSU Computer Science Students. For this site, I:
                             </Typography>
                             <div className="MuiTypography-alignLeft MuiTypography-root MuiTypography-body1">
                                 <ul>
@@ -130,7 +190,7 @@ export default function Portfolio() {
                                         admin account.
                                     </li>
                                     <li>
-                                        During this project, I was able to learn PHP, SQL, ffmpeg, and other monolithic technologies that make up a huge part of systems today.
+                                        Learned PHP, SQL, ffmpeg, and other monolithic technologies that make up a huge part of systems today.
                                     </li>
                                 </ul>
                             </div>
@@ -315,6 +375,43 @@ export default function Portfolio() {
         dates: 'August 2021 → Present'
     }
 
+    const otherProject = {
+        content: (
+            <Grid container>
+                <Grid container alignItems="center">
+                    <Grid item xs={12} md={6}>
+                        <img src={GithubHQ} style={{
+                            width: '100%'
+                        }} />
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <div className="textPadded">
+                            <Typography align="left">
+                                &emsp;&emsp;You can find the rest of my Projects on GitHub. I try to put all of my projects there, and all of my work projects are hosted there aswell.
+                                <br />
+                                <br />
+                                &emsp;&emsp;You also can see what I've been up to in the last few days there. With over 2000 (and counting) contributions in 2021 alone, im probably up to something!
+                            </Typography>
+                            <Grid container>
+                                <Grid item>
+                                    <Button variant="contained" color='primary' style={{
+                                        margin: '15px',
+                                        marginLeft: '0'
+                                    }} onClick={() => {
+                                        window.open('https://github.com/drg101', '_blank')
+                                    }}>Go To My GitHub</Button>
+                                </Grid>
+                            </Grid>
+                        </div>
+                    </Grid>
+                </Grid>
+            </Grid>
+        ),
+        timeStart: new Date('3/01/2018').valueOf(),
+        name: "Other, More Minor Projects",
+        dates: 'March 2018 → Present'
+    }
+
     return <Grid container justify="flex-start">
         <Grid item xs={12}>
             <Typography variant='h4'>
@@ -325,7 +422,9 @@ export default function Portfolio() {
             selfDrivingCar,
             urbanSustainability,
             infospaces,
-            trueNorth
+            trueNorth,
+            cryptographyLib,
+            otherProject
         ])}
     </Grid>
 }
