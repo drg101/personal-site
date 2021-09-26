@@ -79,7 +79,7 @@ export default function Main() {
     const { globalState, setGlobalState } = useGlobalState();
     const { page } = globalState;
     const [darkModeSwitchValue, setDarkModeSwitchValue] = useState(window.darkMode ?? false as boolean)
-    const matches = useMediaQuery('(max-width:1000px)');
+    const matches = useMediaQuery('(max-width:960px)');
 
     useEffect(() => {
         window.onpopstate = () => {

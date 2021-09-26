@@ -20,7 +20,7 @@ export default function Resume() {
         <Grid item xs={12}>
             <Paper style={{ padding: '2vw' }}>
                 <Grid item xs={12}>
-                    <Typography variant='h5' align='left'>Daniel Reynolds</Typography>
+                    <Typography variant='h4' align='left'>Daniel Reynolds</Typography>
                 </Grid>
                 <Grid item xs={12}>
                     <Grid container>
@@ -51,7 +51,7 @@ export default function Resume() {
         <Grid item xs={12}>
             <Paper style={{ padding: '2vw' }}>
                 <Grid item xs={12}>
-                    <Typography variant="h6" align="left">Experience</Typography>
+                    <Typography variant="h5" align="left">Experience</Typography>
                     <br />
                     <Typography align="left">
                         <b>Full-Stack Software Engineer</b> - <i>Project Sustain, Colorado State University</i>
@@ -105,7 +105,7 @@ export default function Resume() {
         <Grid item xs={12}>
             <Paper style={{ padding: '2vw' }}>
                 <Grid item xs={12}>
-                    <Typography variant="h6" align="left">Education</Typography>
+                    <Typography variant="h5" align="left">Education</Typography>
                     <br />
                     <Typography align="left">
                         <b>Colorado State University, Fort Collins</b> - <i>Bachelor of Science in Computer Science, Artificial Intelligence and Machine Learning Concentration with a Minor in Mathematics</i>
@@ -135,7 +135,7 @@ export default function Resume() {
         <Grid item xs={12}>
             <Paper style={{ padding: '2vw' }}>
                 <Grid item xs={12}>
-                    <Typography variant="h6" align="left">Skills</Typography>
+                    <Typography variant="h5" align="left">Skills</Typography>
                     <br />
                     <Typography align="left">
                         <b>Technical Skills</b>
@@ -160,7 +160,7 @@ export default function Resume() {
         <Grid item xs={12}>
             <Paper style={{ padding: '2vw' }}>
                 <Grid item xs={12}>
-                    <Typography variant="h6" align="left">Projects</Typography>
+                    <Typography variant="h5" align="left">Projects</Typography>
                     <br />
                     <Grid container>
                         <Grid item>

@@ -225,7 +225,7 @@ export default function Portfolio() {
                     <Grid item xs={12} md={6}>
                         <div className="textPadded">
                             <Typography align="left">
-                                For our Introduction to Artificiall Intelligcence Class' term research project, my friend Joe and I decided to go above and beyond.
+                                For our Introduction to Artificial Intelligence Class' term research project, my friend Joe and I decided to go above and beyond.
                                 This project started with one goal: turn some physical thing into a self driving car.
                             </Typography>
                             <br />
@@ -294,7 +294,7 @@ export default function Portfolio() {
                 </Grid>
                 <Grid container alignItems="center">
                     <Grid item xs={12} md={6}>
-                        <iframe width="377px" height="771px" src="https://www.youtube.com/embed/_NIIsQdZSgM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen frameBorder="0"></iframe>
+                        <iframe width="100%" height="600px" src="https://www.youtube.com/embed/_NIIsQdZSgM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen frameBorder="0"></iframe>
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <div className="textPadded">
@@ -316,7 +316,7 @@ export default function Portfolio() {
     }
 
     return <Grid container justify="flex-start">
-        <Grid item xs={12} style={{ marginBottom: "2vh" }}>
+        <Grid item xs={12}>
             <Typography variant='h4'>
                 My (Proudest) Projects.
             </Typography>
