@@ -31,13 +31,15 @@ export default function Portfolio() {
                     <br />
                     <Divider />
                     <br />
-                    <a href={`#${project.name}`} style={{
-                        textDecoration: 'none'
-                    }}>
-                        <Typography variant="h5" color="textPrimary">{project.name}</Typography>
-                    </a>
-                    <Typography variant="caption">{project.dates}</Typography>
-                    {project.content}
+                    <Paper style={{padding: '1vw'}}>
+                        <a href={`#${project.name}`} style={{
+                            textDecoration: 'none'
+                        }}>
+                            <Typography variant="h5" color="textPrimary">{project.name}</Typography>
+                        </a>
+                        <Typography variant="caption">{project.dates}</Typography>
+                        {project.content}
+                    </Paper>
                 </Grid>
             </Grid >
         })
@@ -190,11 +192,11 @@ export default function Portfolio() {
                             </Typography>
                         </div>
                     </Grid>
-                    <Grid item xs={12}><br/></Grid>
+                    <Grid item xs={12}><br /></Grid>
                 </Grid>
                 <Grid container alignItems="center">
                     <Grid item xs={12} md={6}>
-                    <iframe width="100%" height="300" src="https://www.youtube.com/embed/7B3mC9E3kK0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/7B3mC9E3kK0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <div className="textPadded">

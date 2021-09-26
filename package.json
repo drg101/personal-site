@@ -5,6 +5,7 @@
   "homepage": "https://drg101.github.io/personal-site",
   "dependencies": {
     "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
     "@nivo/core": "^0.69.0",
     "@nivo/pie": "^0.69.0",
     "@testing-library/jest-dom": "^5.12.0",

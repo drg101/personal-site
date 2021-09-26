@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.scss';
+import './main/Main.scss'
 import { Grid, ThemeProvider, makeStyles, Container } from '@material-ui/core';
 import Header from './header/Header';
 import Main from './main/Main';
@@ -39,7 +40,7 @@ function App() {
             <ThemeProvider theme={theme}>
                 <CssBaseline />
                 <div className="App">
-                    <Container maxWidth="lg" >
+                    <Container maxWidth="lg" className="siteContainer">
                         <Main />
                     </Container>
                 </div>

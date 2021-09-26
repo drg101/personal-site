@@ -92,15 +92,26 @@
 }
 
 @media only screen and (max-width: 1000px){
-    /*Tablets [601px -> 1000px]*/
-    .headerItemRight {
-        float: left;
+    .headerItemRight, .headerItemLeft {
+        display: block !important;
+        width: 100% !important;
+    }
+    .header {
+        margin: 0 !important;
+    }
+    .MuiAccordionSummary-content {
+        display: block !important;
+        margin-bottom: 0 !important;
+    }
+    .MuiAccordionSummary-expandIcon {
+        padding: 0 !important;
+        transform: translateY(-5px);
     }
 }
 @media only screen and (max-width: 600px){
-	/*Big smartphones [426px -> 600px]*/
-    .headerItemRight, .headerItemLeft {
-        display: block !important;
+    .siteContainer {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
     }
 }
 @media only screen and (max-width: 425px){

@@ -1,4 +1,4 @@
-import { Grid, Typography, Switch, styled, FormControlLabel, Divider } from '@material-ui/core';
+import { Grid, Typography, Switch, styled, FormControlLabel, Divider, useMediaQuery, Accordion, AccordionSummary, AccordionActions, AccordionDetails } from '@material-ui/core';
 import PageInfo from '../interfaces/PageInfo';
 import { useGlobalState } from '../globalState/GlobalStateProvider'
 import Home from './Home';
@@ -9,6 +9,8 @@ import Portfolio from './Portfolio';
 import './Main.scss'
 import { CSSProperties, useState, useEffect } from 'react';
 import UrlParams from '../lib/UrlParams';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     width: 62,
@@ -77,6 +79,7 @@ export default function Main() {
     const { globalState, setGlobalState } = useGlobalState();
     const { page } = globalState;
     const [darkModeSwitchValue, setDarkModeSwitchValue] = useState(window.darkMode ?? false as boolean)
+    const matches = useMediaQuery('(max-width:1000px)');
 
     useEffect(() => {
         window.onpopstate = () => {
@@ -101,12 +104,42 @@ export default function Main() {
         </div>
     }
 
-    return <Grid container className="content" alignItems="center" alignContent="center" justify="center">
-        <Grid item xs={12}>
-            <Grid container>
-                <Grid item xs={12}>
-                    <div className='header'>
-                        {createHeaderItem("Daniel Reynolds", "home", true)}
+    const renderHeader = () => {
+        if (!matches) {
+            return <div className='header'>
+                {createHeaderItem("Daniel Reynolds", "home", true)}
+                {createHeaderItem("About", "about")}
+                {createHeaderItem("Contact", "contact")}
+                {createHeaderItem("Resume", "resume")}
+                {createHeaderItem("Portfolio", "portfolio")}
+                <div className="headerItemRight" style={{ display: 'inline-block' }} onClick={() => {
+                    localStorage.setItem("darkMode", !darkModeSwitchValue ? "true" : "false")
+                    window.location.reload();
+                }}>
+                    <div className='headerItem'>
+                        <FormControlLabel
+                            control={<MaterialUISwitch checked={darkModeSwitchValue} />}
+                            label={darkModeSwitchValue ? 'Dark Mode' : 'Light Mode'}
+                        />
+                    </div>
+                </div>
+            </div>
+        }
+        else {
+            return <div className='header'>
+                <Accordion style={{
+                    borderRadius: 0,
+                    boxShadow: 'none',
+                    backgroundColor: 'inherit'
+                }}>
+                    <AccordionSummary
+                        style={{display: 'block'}}
+                        expandIcon={<ExpandMoreIcon />}
+                    >
+                        <Typography variant="h4"><b>Daniel Reynolds</b></Typography>
+                    </AccordionSummary>
+                    <AccordionDetails style={{display: 'block'}}>
+                        {createHeaderItem("Home", "home", true)}
                         {createHeaderItem("About", "about")}
                         {createHeaderItem("Contact", "contact")}
                         {createHeaderItem("Resume", "resume")}
@@ -122,7 +155,17 @@ export default function Main() {
                                 />
                             </div>
                         </div>
-                    </div>
+                    </AccordionDetails>
+                </Accordion>
+            </div>
+        }
+    }
+
+    return <Grid container className="content" alignItems="center" alignContent="center" justify="center">
+        <Grid item xs={12}>
+            <Grid container>
+                <Grid item xs={12}>
+                    {renderHeader()}
                 </Grid>
             </Grid>
             <div className="header"><Divider /></div>
