@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/personal-site/static/css/main.f727eaa4.chunk.css",
-    "main.js": "/personal-site/static/js/main.03fe9196.chunk.js",
-    "main.js.map": "/personal-site/static/js/main.03fe9196.chunk.js.map",
+    "main.js": "/personal-site/static/js/main.3b5e2e98.chunk.js",
+    "main.js.map": "/personal-site/static/js/main.3b5e2e98.chunk.js.map",
     "runtime-main.js": "/personal-site/static/js/runtime-main.a394bae3.js",
     "runtime-main.js.map": "/personal-site/static/js/runtime-main.a394bae3.js.map",
     "static/js/2.c9bc3e77.chunk.js": "/personal-site/static/js/2.c9bc3e77.chunk.js",
@@ -13,6 +13,7 @@
     "static/css/main.f727eaa4.chunk.css.map": "/personal-site/static/css/main.f727eaa4.chunk.css.map",
     "static/js/2.c9bc3e77.chunk.js.LICENSE.txt": "/personal-site/static/js/2.c9bc3e77.chunk.js.LICENSE.txt",
     "static/media/TrueNorthHQ.35b93812.jpg": "/personal-site/static/media/TrueNorthHQ.35b93812.jpg",
+    "static/media/algosJupy.8584e922.png": "/personal-site/static/media/algosJupy.8584e922.png",
     "static/media/aper1.2daf6b18.png": "/personal-site/static/media/aper1.2daf6b18.png",
     "static/media/aper2.377948a8.PNG": "/personal-site/static/media/aper2.377948a8.PNG",
     "static/media/bgMain.117ff3cc.JPG": "/personal-site/static/media/bgMain.117ff3cc.JPG",
@@ -23,6 +24,7 @@
     "static/media/darkModeResume.dea7ef58.png": "/personal-site/static/media/darkModeResume.dea7ef58.png",
     "static/media/fastLoad.a565f6a1.gif": "/personal-site/static/media/fastLoad.a565f6a1.gif",
     "static/media/github.ff264807.png": "/personal-site/static/media/github.ff264807.png",
+    "static/media/githubHQ.fe3aca93.png": "/personal-site/static/media/githubHQ.fe3aca93.png",
     "static/media/infospaces.5abddf6a.png": "/personal-site/static/media/infospaces.5abddf6a.png",
     "static/media/instagram.30c4a6fe.png": "/personal-site/static/media/instagram.30c4a6fe.png",
     "static/media/lightModeResume.cfcb99b1.png": "/personal-site/static/media/lightModeResume.cfcb99b1.png",
@@ -34,6 +36,6 @@
     "static/js/runtime-main.a394bae3.js",
     "static/js/2.c9bc3e77.chunk.js",
     "static/css/main.f727eaa4.chunk.css",
-    "static/js/main.03fe9196.chunk.js"
+    "static/js/main.3b5e2e98.chunk.js"
   ]
 }
