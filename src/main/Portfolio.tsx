@@ -64,7 +64,7 @@ export default function Portfolio() {
                                 <br />
                                 Looking at this project in hindsight, it definetly is a bit silly, but hey, I was in high school.
                                 <br />
-                                For this project, I
+                                For this project, I:
                             </Typography>
                             <div className="MuiTypography-alignLeft MuiTypography-root MuiTypography-body1">
                                 <ul>
