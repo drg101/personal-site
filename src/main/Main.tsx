@@ -94,6 +94,10 @@ export default function Main() {
         };
     }, [])
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [page])
+
     const createHeaderItem = (text: string, page: string, bold = false) => {
         const textStyle = bold ? { fontWeight: 'bold' } : {}
         return <div style={{ display: 'inline-block' }} className="headerItemLeft">
