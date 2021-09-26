@@ -80,6 +80,7 @@ export default function Main() {
     const { page } = globalState;
     const [darkModeSwitchValue, setDarkModeSwitchValue] = useState(window.darkMode ?? false as boolean)
     const matches = useMediaQuery('(max-width:960px)');
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     useEffect(() => {
         window.onpopstate = () => {
@@ -97,6 +98,7 @@ export default function Main() {
         const textStyle = bold ? { fontWeight: 'bold' } : {}
         return <div style={{ display: 'inline-block' }} className="headerItemLeft">
             <div className='headerItem' onClick={() => {
+                mobileMenuOpen && setMobileMenuOpen(false)
                 setGlobalState({ page })
             }}>
                 <Typography variant='h5' style={textStyle as CSSProperties}>{text}</Typography>
@@ -131,6 +133,8 @@ export default function Main() {
                     borderRadius: 0,
                     boxShadow: 'none',
                     backgroundColor: 'inherit'
+                }} expanded={mobileMenuOpen} onClick={() => {
+                    setMobileMenuOpen(!mobileMenuOpen)
                 }}>
                     <AccordionSummary
                         style={{display: 'block'}}
