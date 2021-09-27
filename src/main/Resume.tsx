@@ -61,7 +61,6 @@ export default function Resume() {
                     <div className="resumeBullets">
                         <Typography align="left">
                             <br />
-                            <br />
                             🗺️ Engineered {'&'} developed an innovative geospatial visualization system for the web.
                             <br />
                             <br />
@@ -84,7 +83,6 @@ export default function Resume() {
                     </Typography>
                     <div className="resumeBullets">
                         <Typography align="left">
-                            <br />
                             <br />
                             ‍💻 Responsible for adding features to a how-to video site created for CSU Computer Science students.
                             <br />
@@ -114,7 +112,6 @@ export default function Resume() {
                     </Typography>
                     <div className="resumeBullets">
                         <Typography align="left">
-                            <br />
                             <br />
                             🎓 GPA: 3.97
                             <br />

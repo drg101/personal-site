@@ -119,11 +119,13 @@ export default function Portfolio() {
                     <Grid item xs={12} md={6}>
                         <div className="textPadded">
                             <Typography align="left">
-                                &emsp;&emsp;For the spring semester of 2021, I decided to take the "Mathematic of Information Security," also known as cryptography. The proffessor for this
+                                For the spring semester of 2021, I decided to take the "Mathematics of Information Security," also known as cryptography. The proffessor for this
                                 class was awesome, and let us build our own programming libraries to use for homework and tests.
+                                <br/>
+                                <br/>
                             </Typography>
                             <Typography align="left">
-                                &emsp;&emsp;So logically, I started writing an absolutely massive amount of Python for this class, implementing every single algorithm, theorem, and formula we learned.
+                                Logically, I started writing an absolutely massive amount of Python for this class, implementing every single algorithm, theorem, and formula we learned.
                                 This code is now all available on GitHub, totaling to over 60+ files. This library features some cool stuff like:
                             </Typography>
                             <div className="MuiTypography-alignLeft MuiTypography-root MuiTypography-body1">
