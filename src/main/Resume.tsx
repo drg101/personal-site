@@ -71,7 +71,21 @@ export default function Resume() {
                             <br />
                             <br />
                             ⚡ Accelerated client performance by leveraging modern web features, pushing the boundaries for what is possible for a web app.
+                            <br/>
+                            <br/>
                         </Typography>
+                        <Grid container>
+                            <Grid item>
+                                <Button variant="contained" color='primary' onClick={() => {
+                                    const t = document.createElement('a')
+                                    t.href = '#urban_sustainabilty_research_&_software_engineering'
+                                    document.body.appendChild(t)
+                                    t.click()
+                                    document.body.removeChild(t)
+                                    setGlobalState({ page: 'portfolio' })
+                                }}>Learn More</Button>
+                            </Grid>
+                        </Grid>
                     </div>
 
                     <br />
@@ -88,7 +102,21 @@ export default function Resume() {
                             <br />
                             <br />
                             🎥 Learned and consolidated complex topics into 2-minute videos that contained essential content.
+                            <br/>
+                            <br/>
                         </Typography>
+                        <Grid container>
+                            <Grid item>
+                                <Button variant="contained" color='primary' onClick={() => {
+                                    const t = document.createElement('a')
+                                    t.href = '#video_creation_&_web_developing'
+                                    document.body.appendChild(t)
+                                    t.click()
+                                    document.body.removeChild(t)
+                                    setGlobalState({ page: 'portfolio' })
+                                }}>Learn More</Button>
+                            </Grid>
+                        </Grid>
                     </div>
                 </Grid >
             </Paper>

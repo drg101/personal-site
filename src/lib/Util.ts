@@ -11,6 +11,10 @@ export const getJSON: (url: string) => Promise<any> = async (url) => {
     })
 }
 
+export const toURIString = (str: string) => {
+    return str.replaceAll(' ', '_').replaceAll(',', "_").toLocaleLowerCase()
+}
+
 export const isValidAddress: (address: string) => boolean = (address) => {
     return address.length === 42;
 }

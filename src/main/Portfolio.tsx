@@ -3,7 +3,7 @@ import PageInfo from '../interfaces/PageInfo';
 import { useGlobalState } from '../globalState/GlobalStateProvider'
 import './Main.scss';
 import DanielImg from "../static/images/daniel.jpg"
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import SelfDrivingCar from '../static/images/bobv1.jpg'
 import SelfDrivingCarPlan from '../static/images/bobPlan.jpg'
 import AperPic from "../static/images/aper1.png"
@@ -13,6 +13,8 @@ import TrueNorthHQ from "../static/images/TrueNorthHQ.jpg"
 import Aper2Pic from "../static/images/aper2.PNG"
 import AlgosJupy from "../static/images/algosJupy.png"
 import GithubHQ from "../static/images/githubHQ.png"
+import { toURIString } from "../lib/Util"
+import UrlParams from '../lib/UrlParams';
 
 
 interface Project {
@@ -26,6 +28,13 @@ export default function Portfolio() {
     const { globalState, setGlobalState } = useGlobalState();
     const [ordering, setOrdering] = useState('newToOld' as 'newToOld' | 'oldToNew')
 
+    useEffect(() => {
+        const goto = UrlParams().goTo
+        setTimeout(() => {
+            goto && document.getElementById(goto)?.scrollIntoView(true)
+        }, 10)
+    }, [])
+
     const renderProjects = (projectsList: Project[]) => {
         return projectsList.sort((a, b) => ordering !== 'newToOld' ? a.timeStart - b.timeStart : b.timeStart - a.timeStart).map((project) => {
             return <Grid container key={project.timeStart}>
@@ -34,10 +43,10 @@ export default function Portfolio() {
                     <Divider />
                     <br />
                     <Paper style={{ padding: '1vw' }}>
-                        <a href={`#${project.name}`} style={{
+                        <a href={`#${toURIString(project.name)}`} style={{
                             textDecoration: 'none'
                         }}>
-                            <Typography variant="h5" color="textPrimary">{project.name}</Typography>
+                            <Typography variant="h5" color="textPrimary" id={`${toURIString(project.name)}`}>{project.name}</Typography>
                         </a>
                         <Typography variant="caption">{project.dates}</Typography>
                         {project.content}
@@ -121,8 +130,8 @@ export default function Portfolio() {
                             <Typography align="left">
                                 For the spring semester of 2021, I decided to take the "Mathematics of Information Security," also known as cryptography. The proffessor for this
                                 class was awesome, and let us build our own programming libraries to use for homework and tests.
-                                <br/>
-                                <br/>
+                                <br />
+                                <br />
                             </Typography>
                             <Typography align="left">
                                 Logically, I started writing an absolutely massive amount of Python for this class, implementing every single algorithm, theorem, and formula we learned.
@@ -231,13 +240,17 @@ export default function Portfolio() {
                                 <br />
                                 <br />
                                 If you want to hear more about what I've been doing in this project,
-                                <Button variant="contained" color='primary' style={{
-                                    margin: '15px',
-                                    marginLeft: '0'
-                                }} onClick={() => {
-                                    setGlobalState({ page: 'contact' })
-                                }}>Contact Me!</Button>
                             </Typography>
+                            <Grid container>
+                                <Grid item>
+                                    <Button variant="contained" color='primary' style={{
+                                        margin: '15px',
+                                        marginLeft: '0'
+                                    }} onClick={() => {
+                                        setGlobalState({ page: 'contact' })
+                                    }}>Contact Me!</Button>
+                                </Grid>
+                            </Grid>
                         </div>
                     </Grid>
                 </Grid>
