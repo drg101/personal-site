@@ -16,12 +16,13 @@ import GithubHQ from "../static/images/githubHQ.png"
 import { toURIString } from "../lib/Util"
 import UrlParams from '../lib/UrlParams';
 
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
 
 interface Project {
     content: JSX.Element,
-    timeStart: number,
+    time: [Date, Date | number],
     name: string,
-    dates: string,
     languages: string[],
     libraries: string[],
     category: string
@@ -39,8 +40,21 @@ export default function Portfolio() {
     }, [])
 
     const renderProjects = (projectsList: Project[]) => {
-        return projectsList.sort((a, b) => ordering !== 'newToOld' ? a.timeStart - b.timeStart : b.timeStart - a.timeStart).map((project) => {
-            return <Grid container key={project.timeStart}>
+        return projectsList.sort((a, b) => { 
+            const aV: number = a.time[0].valueOf();
+            let bV: number;
+            if(typeof b.time[1] === 'object') {
+                bV = b.time[1].valueOf();
+            }
+            else {
+                bV = b.time[1]
+            }
+            if(aV === bV) {
+                return b.time[0].valueOf() - a.time[0].valueOf()
+            }
+            return bV - aV; 
+        }).map((project) => {
+            return <Grid container key={JSON.stringify(project.time[0].valueOf())}>
                 <Grid item xs={12}>
                     <br />
                     <Divider />
@@ -53,7 +67,7 @@ export default function Portfolio() {
                                 {project.name}
                             </Typography>
                         </a>
-                        <Typography variant="caption">{project.dates}</Typography>
+                        <Typography variant="caption">{months[project.time[0].getUTCMonth()]} {project.time[0].getUTCFullYear()} → {typeof project.time[1] === 'number' ? 'Present' : months[project.time[1].getUTCMonth()] + ' ' + project.time[1].getUTCFullYear()} </Typography>
                         <Typography>
                             📖 {project.languages.join(' ● ')}
                         </Typography>
@@ -127,9 +141,8 @@ export default function Portfolio() {
                 </Grid> */}
             </Grid>
         ),
-        timeStart: new Date('1/01/2019').valueOf(),
-        name: "True North, Published Video game",
-        dates: 'January 2019 → July 2019'
+        time: [new Date('1/01/2019'), new Date('7/15/2019')],
+        name: "True North, Published Video game"
     }
 
     const cryptographyLib: Project = {
@@ -190,9 +203,8 @@ export default function Portfolio() {
                 </Grid>
             </Grid>
         ),
-        timeStart: new Date('1/23/2021').valueOf(),
         name: "Cryptography Python Library",
-        dates: 'January 2021 → May 2021'
+        time: [new Date('1/01/2021'), new Date('5/15/2021')],
     }
 
     const infospaces: Project = {
@@ -236,9 +248,8 @@ export default function Portfolio() {
                 </Grid>
             </Grid>
         ),
-        timeStart: new Date('2/01/2020').valueOf(),
         name: "Video Creation & Web Developing",
-        dates: 'Febuary 2020 → May 2020'
+        time: [new Date('2/01/2020'), new Date('5/15/2020')],
     }
 
     const urbanSustainability: Project = {
@@ -308,9 +319,8 @@ export default function Portfolio() {
                 </Grid>
             </Grid>
         ),
-        timeStart: new Date('2/02/2020').valueOf(),
         name: "Urban Sustainabilty Research & Software Engineering",
-        dates: 'Febuary 2020 → Present'
+        time: [new Date('2/02/2020'), Infinity]
     }
 
     const selfDrivingCar: Project = {
@@ -413,9 +423,8 @@ export default function Portfolio() {
                 </Grid>
             </Grid>
         ),
-        timeStart: new Date('8/30/2021').valueOf(),
         name: "Self Driving Car",
-        dates: 'August 2021 → Present'
+        time: [new Date('8/30/2021'), Infinity]
     }
 
     const otherProject = {
@@ -453,9 +462,8 @@ export default function Portfolio() {
                 </Grid>
             </Grid>
         ),
-        timeStart: new Date('3/01/2018').valueOf(),
         name: "Other, More Minor Projects",
-        dates: 'March 2018 → Present'
+        time: [new Date('3/01/2018'), -1] as [Date, number]
     }
 
     const watercolor: Project = {
@@ -494,9 +502,8 @@ export default function Portfolio() {
                 </Grid>
             </Grid>
         ),
-        timeStart: new Date('9/01/2020').valueOf(),
         name: "Batch AI Image Upscaler",
-        dates: 'September 2020 → December 2020'
+        time: [new Date('9/15/2020'), new Date('12/15/2020')]
     }
 
     return <Grid container justify="flex-start">
