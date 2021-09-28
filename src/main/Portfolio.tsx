@@ -60,8 +60,8 @@ export default function Portfolio() {
                         <Typography>
                             🛠️ {project.libraries.join(' ● ')}
                         </Typography>
-                        <br/>
-                        <Divider/>
+                        <br />
+                        <Divider />
                         {project.content}
                     </Paper>
                 </Grid>
@@ -458,6 +458,47 @@ export default function Portfolio() {
         dates: 'March 2018 → Present'
     }
 
+    const watercolor: Project = {
+        languages: ['Python', 'JavaScript', 'HTML', 'CSS'],
+        libraries: ['OpenCV', 'Docker', 'Kubernetes'],
+        category: 'School',
+        content: (
+            <Grid container alignItems="center">
+                <Grid item xs={12} md={6}>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/LNAdZsFi_zI" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                    <div className="textPadded">
+                        <Typography align="left">
+                            For the term project for my Operating Systems class, we were expected to build some sort of containerized application using Kubernetes and Docker.
+                            I was fortunate enough to have a great couple of friends to do this project with, so this was definetly a fun one.
+                            <br />
+                            <br />
+                            My team and I decided to build a batch AI image upscaling application, which would have a simple JavaScript frontend and a containerized Python backend.
+                            <br />
+                            <br />
+                            Thanks to some epic teamwork, this project went insanely smoothly and we ended up with a very cool end-product. Check out the video!
+                            <br />
+                        </Typography>
+                        <Grid container>
+                            <Grid item>
+                                <Button variant="contained" color='primary' style={{
+                                    margin: '15px',
+                                    marginLeft: '0'
+                                }} onClick={() => {
+                                    window.open('https://github.com/drg101/watercolor', '_blank')
+                                }}>View it On GitHub</Button>
+                            </Grid>
+                        </Grid>
+                    </div>
+                </Grid>
+            </Grid>
+        ),
+        timeStart: new Date('9/01/2020').valueOf(),
+        name: "Batch AI Image Upscaler",
+        dates: 'September 2020 → December 2020'
+    }
+
     return <Grid container justify="flex-start">
         <Grid item xs={12}>
             <Typography variant='h4'>
@@ -470,7 +511,8 @@ export default function Portfolio() {
             infospaces,
             trueNorth,
             cryptographyLib,
-            otherProject
+            otherProject,
+            watercolor
         ])}
     </Grid>
 }
