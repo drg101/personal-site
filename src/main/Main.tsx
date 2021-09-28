@@ -59,20 +59,41 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     },
 }));
 
+interface strDict {
+    [k: string]: {
+        label: string,
+        mobileLabel?: string,
+        component: JSX.Element
+    }
+}
+
+const pageMap: strDict = {
+    home: {
+        label: "Daniel Reynolds",
+        mobileLabel: "Home",
+        component: <Home />
+    },
+    about: {
+        label: "About",
+        component: <About />
+    },
+    contact: {
+        label: "Contact",
+        component: <Contact />
+    },
+    resume: {
+        label: "Resume",
+        component: <Resume />
+    },
+    portfolio: {
+        label: "Portfolio",
+        component: <Portfolio />
+    }
+}
 
 function renderMain(pageId: string) {
-    switch (pageId) {
-        case "home":
-            return <Home />
-        case "about":
-            return <About />
-        case "contact":
-            return <Contact />
-        case "resume":
-            return <Resume />
-        case "portfolio":
-            return <Portfolio />
-    }
+    document.title = pageMap[pageId].label === "Daniel Reynolds" ? "Daniel Reynolds" : `${pageMap[pageId].label} - Daniel Reynolds`;
+    return pageMap[pageId].component;
 }
 
 export default function Main() {
