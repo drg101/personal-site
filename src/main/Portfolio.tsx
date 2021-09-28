@@ -21,7 +21,10 @@ interface Project {
     content: JSX.Element,
     timeStart: number,
     name: string,
-    dates: string
+    dates: string,
+    languages: string[],
+    libraries: string[],
+    category: string
 }
 
 export default function Portfolio() {
@@ -46,9 +49,19 @@ export default function Portfolio() {
                         <a href={`#${toURIString(project.name)}`} style={{
                             textDecoration: 'none'
                         }}>
-                            <Typography variant="h5" color="textPrimary" id={`${toURIString(project.name)}`}>{project.name}</Typography>
+                            <Typography variant="h5" color="textPrimary" id={`${toURIString(project.name)}`}>
+                                {project.name}
+                            </Typography>
                         </a>
                         <Typography variant="caption">{project.dates}</Typography>
+                        <Typography>
+                            📖 {project.languages.join(' ● ')}
+                        </Typography>
+                        <Typography>
+                            🛠️ {project.libraries.join(' ● ')}
+                        </Typography>
+                        <br/>
+                        <Divider/>
                         {project.content}
                     </Paper>
                 </Grid>
@@ -57,6 +70,9 @@ export default function Portfolio() {
     }
 
     const trueNorth: Project = {
+        languages: ['C#'],
+        libraries: ['Steamworks', 'Unity', 'Adobe Illustrator', 'Davinci Resolve', 'Audacity'],
+        category: 'Personal',
         content: (
             <Grid container>
                 <Grid container alignItems="center">
@@ -117,6 +133,9 @@ export default function Portfolio() {
     }
 
     const cryptographyLib: Project = {
+        languages: ['Python'],
+        libraries: ['Jupyter Notebook', 'Git'],
+        category: 'School',
         content: (
             <Grid container>
                 <Grid container alignItems="center">
@@ -177,6 +196,9 @@ export default function Portfolio() {
     }
 
     const infospaces: Project = {
+        languages: ['PHP', 'HTML', 'CSS', 'JavaScript', 'Bash', 'SQL'],
+        libraries: ['ffmpeg', 'MySQL', 'jQuery', 'Git', 'Davinci Resolve', 'Audacity'],
+        category: 'Work',
         content: (
             <Grid container>
                 <Grid container alignItems="center">
@@ -220,6 +242,9 @@ export default function Portfolio() {
     }
 
     const urbanSustainability: Project = {
+        languages: ['JavaScript', 'TypeScript', 'HTML', 'CSS', 'Java', 'Python', 'Bash', 'GeoJSON'],
+        libraries: ['Leaflet', 'ReactJS', 'NodeJS', 'd3', 'MaterialUI', 'gRPC', 'MongoDB', 'Webpack', 'Dexie', 'jQuery', 'Nivo'],
+        category: 'Work',
         content: (
             <Grid container>
                 <Grid container alignItems="center">
@@ -289,6 +314,9 @@ export default function Portfolio() {
     }
 
     const selfDrivingCar: Project = {
+        languages: ['JavaScript', 'TypeScript', 'Python'],
+        libraries: ['Electrical Engineering', 'Socket.io', 'Python Sockets', 'OpenCV', 'Raspberry PI', 'ReactJS'],
+        category: 'School',
         content: (
             <Grid container>
                 <Grid container alignItems="center">
@@ -391,6 +419,9 @@ export default function Portfolio() {
     }
 
     const otherProject = {
+        languages: ['JavaScript', 'Java', 'Python', 'Bash', 'TypeScript', 'HTML', 'CSS', 'Bash', 'C#', 'and More'],
+        libraries: ['Unity', 'Git', 'NodeJS', 'ReactJS', 'and More'],
+        category: 'Personal, School, Work',
         content: (
             <Grid container>
                 <Grid container alignItems="center">
