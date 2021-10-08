@@ -23,7 +23,7 @@ export default function Home() {
         }, 4500)
     }, [])
 
-    const playAnimation = !sessionStorage.getItem("animPlayed") || true;
+    const playAnimation = !sessionStorage.getItem("animPlayed");
 
     const renderCategory = (label: string, image: any, page: string, cNum: number) => {
         return <Grid item xs={12} sm={6} md={6} className={`category ${playAnimation ? `c${cNum}` : ''}`}>
