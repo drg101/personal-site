@@ -46,14 +46,14 @@ export default function Home() {
                 display: 'inline-block',
                 verticalAlign: 'top'
             }}>
-                <Typography variant="h2" className={playAnimation ? `typewriter` : ''}>Hi! I'm Daniel.</Typography>
+                <Typography variant="h2" className={playAnimation ? `typewriter` : ''}>Daniel Reynolds</Typography>
             </div>
             <br />
             <div style={{
                 display: 'inline-block',
                 verticalAlign: 'top'
             }}>
-                <Typography variant="h4" className={playAnimation ? `typewriter2` : ''}>Thanks for checking out my site!</Typography>
+                <Typography variant="h4" className={playAnimation ? `typewriter2` : ''}>Software Engineer {'&'} Student</Typography>
             </div>
         </Grid>
         {renderCategory("About Me", DanielImg, "about", 0)}

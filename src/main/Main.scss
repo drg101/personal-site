@@ -4,22 +4,22 @@
 }
 
 .c0 {
-    animation: flyIn 1s 2.8s forwards;
+    animation: flyIn 1s 3.4s forwards;
     transform: translateX(100vw);
 }
 
 .c1 {
-    animation: flyIn 1s 3s forwards;
+    animation: flyIn 1s 3.6s forwards;
     transform: translateX(100vw);
 }
 
 .c2 {
-    animation: flyIn 1s 3.2s forwards;
+    animation: flyIn 1s 3.8s forwards;
     transform: translateX(100vw);
 }
 
 .c3 {
-    animation: flyIn 1s 3.4s forwards;
+    animation: flyIn 1s 4.0s forwards;
     transform: translateX(100vw);
 }
 
@@ -156,7 +156,7 @@
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     // letter-spacing: 0.15em; /* Adjust as needed */
-    animation: typing 1s steps(15, end), blink-caret 0.25s step-end infinite;
+    animation: typing 1.2s steps(15, end);
 }
 
 .typewriter2{ 
@@ -165,7 +165,7 @@
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     // letter-spacing: 0.15em; /* Adjust as needed */
-    animation: disp 0s 1.3s forwards, typing 1.5s steps(30, end) 1.3s, blink-caret 0.25s step-end infinite;
+    animation: disp 0s 1.5s forwards, typing 1.8s steps(37, end) 1.5s;
     visibility: hidden;
 }
 
