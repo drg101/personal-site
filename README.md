@@ -4,8 +4,8 @@
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode.
 
-### `npm run build`
+### `npm run deploy`
 
-Builds the app for production to the `build` folder.\
+Deploys the app.
