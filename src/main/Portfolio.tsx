@@ -98,10 +98,10 @@ export default function Portfolio() {
                     <Grid item xs={12} md={6}>
                         <div className="textPadded">
                             <Typography align="left">
-                                In the first half of 2019 as I was finishing high school, I decided it was time to put my self-taught Unity skills to work. In high school, I played quite alot
-                                of first person shooter (FPS) games, so I decided that would be the type of game I would make.
+                                In the first half of 2019 as I was finishing high school, I decided it was time to put my self-taught Unity skills to work. In high school, I played quite a lot
+                                of first-person shooter (FPS) games, so I decided that would be the type of game I would make.
                                 <br />
-                                Looking at this project in hindsight, it definetly is a bit silly, but hey, I was in high school.
+                                Looking at this project in hindsight, it definitely is a bit silly, but hey, I was in high school.
                                 <br />
                                 For this project, I:
                             </Typography>
@@ -111,7 +111,7 @@ export default function Portfolio() {
                                         Created an entire ~2h playthrough videogame.
                                     </li>
                                     <li>
-                                        Designed and Implemented an entire logic system for the game, from destructable environmets to A.I. bots. (Theres alot to talk about here!).
+                                        Designed and Implemented an entire logic system for the game, from destructible environments to A.I. bots. (There's a lot to talk about here!).
                                     </li>
                                     <li>
                                         Poured 1000+ hours of development into the game.
@@ -160,7 +160,7 @@ export default function Portfolio() {
                     <Grid item xs={12} md={6}>
                         <div className="textPadded">
                             <Typography align="left">
-                                For the spring semester of 2021, I decided to take the "Mathematics of Information Security," also known as cryptography. The proffessor for this
+                                For the spring semester of 2021, I decided to take the "Mathematics of Information Security," also known as cryptography. The professor for this
                                 class was awesome, and let us build our own programming libraries to use for homework and tests.
                                 <br />
                                 <br />
@@ -231,7 +231,7 @@ export default function Portfolio() {
                                         getting started with the Unix/Linux Shell, and Git.
                                     </li>
                                     <li>
-                                        Designed and implemented high-quality features for the website. These included: video deletion, video editing, a playlist system (Which is now a really big deal!), and a
+                                        Designed and implemented high-quality features for the website. These included: video deletion, video editing, a playlist system (Which is now a really big deal!), and an
                                         admin account.
                                     </li>
                                     <li>
@@ -267,12 +267,12 @@ export default function Portfolio() {
                     <Grid item xs={12} md={6}>
                         <div className="textPadded">
                             <Typography align="left">
-                                For the past year and a half, my primary work as been on an urban sustainablity project, called Project Sustain here
+                                For the past year and a half, my primary work has been on an urban sustainability project, called Project Sustain here
                                 at Colorado State Univeristies' Computer Science Department.
                                 <br />
                                 <br />
                                 A great example of what I've been doing is illustrated by this animation, in which 50+ megabytes of county income information is rendered at blisteringly fast speeds onto a Leaflet map, all on a mediocre internet connection. Much
-                                of this acceleration is due to novel hashing techniques which I implemented on the server and client.
+                                of this acceleration is due to novel hashing techniques that I implemented on the server and client.
                                 <br />
                                 <br />
                                 If you want to hear more about what I've been doing in this project,
@@ -312,14 +312,14 @@ export default function Portfolio() {
                     <Grid item xs={12} md={6}>
                         <div className="textPadded">
                             <Typography align="left">
-                                Here is a video which I made for the project outlining how to use our services to identify vulnerable places.
+                                Here is a video that I made for the project outlining how to use our services to identify vulnerable places.
                             </Typography>
                         </div>
                     </Grid>
                 </Grid>
             </Grid>
         ),
-        name: "Urban Sustainabilty Research & Software Engineering",
+        name: "Urban Sustainability Research & Software Engineering",
         time: [new Date('2/02/2020'), Infinity]
     }
 
@@ -365,7 +365,7 @@ export default function Portfolio() {
                                 </ul>
                             </div>
                             <Typography align="left">
-                                Through building the internals of this car, I gained some basic electrical engineering knowledge, an understanding of motor controllers, and a serous appreciaction
+                                Through building the internals of this car, I gained some basic electrical engineering knowledge, an understanding of motor controllers, and a serious appreciaction
                                 for hardware engineers.
                             </Typography>
                         </div>
@@ -386,11 +386,11 @@ export default function Portfolio() {
                             <div className="MuiTypography-alignLeft MuiTypography-root MuiTypography-body1">
                                 <ol>
                                     <li>
-                                        The RC car itself, which runs Python on its Raspberry Pi. The car sends video information to the intermediary server over UDP sockets, and recieves motor
+                                        The RC car itself, which runs Python on its Raspberry Pi. The car sends video information to the intermediary server over UDP sockets, and receives motor
                                         control information from the intermediary server over TCP sockets.
                                     </li>
                                     <li>
-                                        An intermediary server, written in Python. This server communicates with the aformentioned RC car through UDP and TCP sockets, and communicated with a web
+                                        An intermediary server, written in Python. This server communicates with the aforementioned RC car through UDP and TCP sockets, and communicated with a web
                                         client through socket.io.
                                     </li>
                                     <li>
@@ -442,10 +442,10 @@ export default function Portfolio() {
                     <Grid item xs={12} md={6}>
                         <div className="textPadded">
                             <Typography align="left">
-                                &emsp;&emsp;You can find the rest of my Projects on GitHub. I try to put all of my projects there, and all of my work projects are hosted there aswell.
+                                &emsp;&emsp;You can find the rest of my projects on GitHub. I try to put all of my projects there, and all of my work projects are hosted there aswell.
                                 <br />
                                 <br />
-                                &emsp;&emsp;You also can see what I've been up to in the last few days there. With over 2000 (and counting) contributions in 2021 alone, im probably up to something!
+                                &emsp;&emsp;You also can see what I've been up to in the last few days there. With 2200 (and counting) contributions in 2021 alone, I'm probably up to something!
                             </Typography>
                             <Grid container>
                                 <Grid item>
@@ -479,7 +479,7 @@ export default function Portfolio() {
                     <div className="textPadded">
                         <Typography align="left">
                             For the term project for my Operating Systems class, we were expected to build some sort of containerized application using Kubernetes and Docker.
-                            I was fortunate enough to have a great couple of friends to do this project with, so this was definetly a fun one.
+                            I was fortunate enough to have a great couple of friends to do this project with, so this was definitely a fun one.
                             <br />
                             <br />
                             My team and I decided to build a batch AI image upscaling application, which would have a simple JavaScript frontend and a containerized Python backend.

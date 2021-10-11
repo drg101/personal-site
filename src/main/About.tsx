@@ -46,7 +46,7 @@ export default function About() {
                                     The integration of AI {'&'} ML into physical things
                                 </li>
                                 <li>
-                                    Geospatial-Temporal data visualization
+                                    Geospatial-temporal data visualization
                                 </li>
                             </ul>
                         </div>
