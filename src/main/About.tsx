@@ -53,15 +53,6 @@ export default function About() {
                                 </li>
                             </ul>
                         </div>
-                        <Grid container>
-                            <Grid item xs={12}>
-                                <Button variant="contained" color='primary' style={{
-                                    margin: '15px'
-                                }} onClick={() => {
-                                    setGlobalState({ page: 'contact' })
-                                }}>Contact Me!</Button>
-                            </Grid>
-                        </Grid>
                     </Grid>
                 </Grid>
             </Paper>
