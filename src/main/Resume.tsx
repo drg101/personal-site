@@ -35,8 +35,7 @@ export default function Resume() {
                     </Grid>
                 </Grid>
                 <Grid item xs={12}>
-                    <Typography align='left'>Hard-working, fast learning, and self-driven Computer Science student looking to implement relevant
-                        technologies and gain critical skills through Software Engineering internships. Knowledge and interest in Frontend {'& '}
+                    <Typography align='left'>Hard-working, fast learning, and self-driven Computer Science student {'&'} Software Engineer. Knowledge and interest in Frontend {'& '}
                         Full Stack Software Engineering, AI/ML, 3d Worlds and simulations, and the integration of well-designed software into physical things.</Typography>
                 </Grid>
             </Paper>
