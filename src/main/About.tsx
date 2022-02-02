@@ -48,12 +48,11 @@ export default function About() {
                                 <li>
                                     Geospatial-temporal data visualization
                                 </li>
+                                <li>
+                                    Automation
+                                </li>
                             </ul>
                         </div>
-                        <Typography align='left'>
-                            I'm currently on the hunt for Summer 2022 internships, so if you like my stuff,
-                            <br />
-                        </Typography>
                         <Grid container>
                             <Grid item xs={12}>
                                 <Button variant="contained" color='primary' style={{
